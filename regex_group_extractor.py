@@ -2,8 +2,12 @@ import argparse
 import os
 from idstools import rule
 
-SUPPORTED_PROTOCOLS = ["tcp", "udp", "icmp", "all"]
-SUPPORTED_IP_CLASSES = ["$HOME_NET", "$EXTERNAL_NET", "any"]
+SUPPORTED_PROTOCOLS = ["all", "tcp", "udp", "icmp"]
+SUPPORTED_IP_CLASSES = ["any", "$HOME_NET", "$EXTERNAL_NET"]
+# These two are mutable and are added to as PCREs from particular
+# ports are added
+SUPPORTED_INP_PORTS = ["any"]
+SUPPORTED_OUT_PORTS = ["any"]
 
 def is_valid_pcre(pcre):
     # The other tooling (pcre2mnrl) imposes various restrictions --- if the
@@ -32,12 +36,12 @@ def format_pcre(pcre):
     return pcre
 
 # Generate a key for some sequence of things.
-def identifier(proto, inp_cat):
-    return proto + inp_cat
+def identifier(proto, inp_cat, inp_ports, out_ports):
+    return proto + inp_cat + inp_ports + out_ports
 
 # return the identifiers of any supercategories (i.e. any other
 # categories that have to be run also)
-def compute_supercategories(proto, inp_cat):
+def compute_supercategories(proto, inp_cat, inp_ports, out_ports):
     return [identifier("all", "any"), identifier("all", inp_cat), identifier(proto, "any")]
 
 def compute_group_tuples():
@@ -55,8 +59,8 @@ class GroupClassifier():
         for ident in get_group_identifiers():
             self.regexes[ident] = []
 
-    def add(self, proto, src_ip_class, regex):
-        self.regexes[identifier(proto, src_ip_class)].append(regex)
+    def add(self, proto, src_ip_class, src_port, dst_ports, regex):
+        self.regexes[identifier(proto, src_ip_class, src_port, dst_ports)].append(regex)
 
     def get_category(self, proto, src_ip_class):
         # Return the category --- with one modification, 
@@ -111,10 +115,13 @@ def extract_groups_from(input_file):
             print ("Unrecognized src IPs type: " + src_ips)
             src_ips_type = "any"
 
+        src_ports = header[3]
+        dst_ports = header[6]
+
         # TODO --- Do something about ports, which generally
         # have a wider range...
 
-        groups.add(proto, src_ips_type, format_pcre(snort_rule.pcre))
+        groups.add(proto, src_ips_type, src_ports, dst_ports, format_pcre(snort_rule.pcre))
 
     return groups
 
