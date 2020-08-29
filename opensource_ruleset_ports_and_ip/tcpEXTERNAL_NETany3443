@@ -1,0 +1,4 @@
+/cdpView\.ovpl[^\r\n]*cdpnode=[^\r\n]*%[\x2c\x24\x7c\x3b\x22\x26\x3c\x3f]/
+/connectedNodes.ovpl[^\r\n]*node=[^\r\n]*[\x2c\x24\x7c\x3b\x22\x26\x3c\x3f]/
+/freeIPaddrs\.ovpl[^\r\n]*netid=[^\r\n]*%[\x2c\x24\x7c\x3b\x22\x26\x3c\x3f]/
+/sel\x3d[^\x26\x0a]{73}/

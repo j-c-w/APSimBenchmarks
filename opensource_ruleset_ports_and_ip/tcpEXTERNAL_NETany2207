@@ -1,0 +1,2 @@
+/^email-from-address=[^\r\n]*?[\x3b\x26]/
+/^email-to-address(es)?=[^\r\n]*?[\x3b\x26]/

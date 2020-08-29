@@ -1,0 +1,54 @@
+/^001\xACOptix\s+Pro\s+v\d+\x2E\d+\s+Connected\s+Successfully\x21/
+/\/[0-9a-f]{32}\.html\ HTTP\/1/
+/^0[^\r\n]*Days[^\r\n]*Hours[^\r\n]*Minutes[^\r\n]*Seconds\-[^\r\n]*\|\d+\-[^\r\n]*\-\|/
+/^[a-zA-Z0-9]{1,24}\x7C(([0-9]{1,3})\x2E){3}([0-9]{1,3})\x7C/
+/^Conexion\x7c[^\r\n]*?\x7c[^\r\n]*?\x7c[^\r\n]*?\x7c/
+/(\d{1,3}\x2e){3}\d{1,3}/
+/^DmInf\^[^\r\n]*\^\d+\x2E\d+\x2E\d+\x2E\d+\^/
+/^DmInf\x5E[^\r\n]*\d+\x2E\d+\x2E\d+\x2E\d+\x5E/
+/^FILESIZE\x3E[^\r\n]*\x3E\d+/
+/^(FM\x7C|CH\x7C|get\x7C|lv\x7C|post\x7C|proc\x7C|SCPK\x7C|SC\x7E\x7C)/
+/^FREQ\|\d+/
+/^FREQ\x7C\d+/
+/^GET \x2F3010[0-9A-F]{166}00000001/
+/Host\x3A\x20[0-9\x3A\x2E]{9,21}\x0D\x0A/
+/^IDENTIFY\s+\x23\s+\d+\x2E\d+\x2E\d+\x2E\d+\s+\x23\s+/
+/index.php\?[0-9a-f]{32}$/
+/^info\s+Information\s+for/
+/iptest\=(\d{1,3}\.){3}\d{1,3}(\x3B|\x253b)/
+/^I\x3aNAME\x3a/
+/KEEPALIVE\d{7}/
+/^MAININFO\x7Cpassword\x7CENU\x7CMy\s+server\s+\x3AD\x7C/
+/M[\x62-\x66](?:M[\x5f\x60]){3}M/
+/^NetBus\s+\d+\x2E\d+/
+/^OVN.*Mini\s+Oblivion.*Ready/
+/^passcorrect\x3B\d+\x3B\d+\x3BCIA/
+/^PORT\x3D\d+\x2AVictim\x3D/
+/^psswd((ok\*\-\*Password\s+OK\r\n)|(error\*\-\*Wrong\s+password\r\n))/
+/^ServerDetails\x7c[^\r\n]*\x7c[^\r\n]*\x7c/
+/^Server\x3A\s+Guptachar\s+\d+\x2E\d+/
+/ShadowNet\s+Remote\s+Web\s+Based\s+Spyware/
+/^Sin[^\r\n]*\x0D\x0A\d+\x0D\x0A/
+/^SI\|Server\|[^\r\n]*\|\d+\x2E\d+\x2E\d+\x2E\d+\|/
+/^\s\srad\s\d+\x2E\d+\x2E\d+\s\s\x3E\x3C/
+/^S\x3aUsers\x5c\d+\x2cSTATSTimeTotal/
+/^(TC|FT)P\s+Redirections?\s+destroyed\x21/
+/Theef2\s+FTP\s+Server\x3A/
+/^The\s+Snake\s+Trojan/
+/Troyano\s+Apofis\s+1\x2E0/
+/^ver\d+\x2E\d+/
+/^ver\x3aGhost\s+version\s+\d+\x2E\d+\s+server/
+/x00externalx3dd{5,10}/
+/^\x02[\x08\x0c]\x04\x00/
+/^\x03\x00\x1c\x00\x00\x00\x00\x00\x01Furax\s+1\x2E0b3\s+Server\x00/
+/^\x03\x00\x1c\x00\x00\x00\x00\x00\x01Furax\s+\d+\.\d+\w+\s+Server\x00/
+/^\x22Wollf\s+Remote\s+Manager\x22\s+v\d+\x2E\d+\x0d\x0a/
+/^\x2APORT1\x2A\d+/
+/^\x2APORT2\x2A\d+/
+/^\x2APORT3\x2A\d+/
+/\x2Exspf(\?\x5C\x2F]|$)/
+/\x2f\d{0,10}\x2efunctions HTTP\x2f/
+/\x3Ctitle\x3ETroya\s+\x2D\s+by\s+Sma\s+Soft\x3C\x2Ftitle\x3E/
+/^\x7CConnected with\x3A\s+\d+\x2E\d+.\d+.\d+/
+/\x7C\d+\x2E\d+\x2E\d+\x2E\d+\x7C.*\x7CYuri\s+v1\x2E\d+\x7C/
+/^\xc0STATUS\xc0Server\s\x3A\sKeylogging\sStarted\!$/

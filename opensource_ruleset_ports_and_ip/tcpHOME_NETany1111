@@ -1,0 +1,1 @@
+/^(?=[abchimoprswx])(acs|bin|c(ap|ls)|h(di|ms|tb)|iex|m(oo|tx|ws)|opn|pwr|rst|s(h[di]|ms|tb|wm)|wrd|xls)\x7C/

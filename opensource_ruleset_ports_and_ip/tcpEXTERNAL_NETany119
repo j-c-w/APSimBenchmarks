@@ -1,0 +1,13 @@
+/^AUTHINFO\s+USER\s[^\n]{200}/
+/^cancel\x3a[^\n]{32}/
+/^checkgroups\x3a[^\n]{21}/
+/^ihave\x3a[^\n]{21}/
+/^newgroup\x3a[^\n]{32}/
+/^rmgroup\x3a[^\n]{32}/
+/^SEARCH\s+[^\n]{160}/
+/^sendme\x3a[^\n]{21}/
+/^sendsys\x3a[^\n]{21}/
+/^senduuname\x3a[^\n]{21}/
+/^takethis.*?Path\x3a.*?[\r]{0,1}?\n[\r]{0,1}\n/
+/^version\x3a[^\n]{21}/
+/^X?PAT\s+[^\n]{160}/

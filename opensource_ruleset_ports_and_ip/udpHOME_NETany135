@@ -1,0 +1,1 @@
+/IP\x3A\s+[^\r\n]*\x0d\x0aOS\x3A\s+[^\r\n]*\x0d\x0aSysuptime\x3A\s+[^\r\n]*\x0d\x0aTrojan\x3A\s+[^\r\n]*\x0d\x0aPort\x3A\s+[^\r\n]*\x0d\x0aPassword\x3A\s+[^\r\n]*\x0d\x0aUser\x3A\s+/

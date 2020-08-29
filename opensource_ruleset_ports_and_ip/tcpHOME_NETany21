@@ -1,0 +1,8 @@
+/^GET\s+\x2FK\x3F[^\r\n]*\x7C*\x7C*\x7C*\s+HTTP/
+/MKD\s+\d{4}\x2d(\d{2}\x2d){4}/
+/ps_dump_[^_]+_[a-z]{5}\d{4}\x2Ekcb/
+/seclog_[a-z]{5}\d{4}_\d{10}\x2Ekcb/
+/STOR\s+[01]{1}[0-9]{1}-[0-3]{1}[0-9]{1}-[0-9]{2}_[0-2]{1}[0-9]{1}-[0-6]{1}[0-9]{1}-[0-6]{1}[0-9]{1}Readmeee\x2etxt/
+/^STOR\s+FKS_\w+_\d+-\d+-\d+\.log/
+/^STOR\s+\x2E\x2F(kys|scr|Apps|Urls)[0-9]+\x2Etxt/
+/STOR\x20PIC\x5f\d{6}[a-z]{2}\x5f\x20\x5f\d{7}\x20\x2e\d{3}/

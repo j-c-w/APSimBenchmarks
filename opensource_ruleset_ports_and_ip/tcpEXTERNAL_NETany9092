@@ -1,0 +1,1 @@
+/CREATE FUNCTION\s+([^\s\x28]+).*?\1\s*\x28null/

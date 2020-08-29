@@ -1,0 +1,32 @@
+<anml version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<automata-network id="vasim">
+<state-transition-element id="0_10"  symbol-set="[\x00-\x09\x0b-\x0c\x0e-\xff]">
+	<activate-on-match element="0_10"/>
+	<activate-on-match element="0_11"/>
+</state-transition-element>
+<state-transition-element id="0_11"  symbol-set="[\x26\x3b\x7c]">
+	<report-on-match reportcode="0"/>
+</state-transition-element>
+<state-transition-element id="0_4"  symbol-set="[\x75]"  start="start-of-data">
+	<activate-on-match element="0_5"/>
+</state-transition-element>
+<state-transition-element id="0_5"  symbol-set="[\x73]">
+	<activate-on-match element="0_6"/>
+</state-transition-element>
+<state-transition-element id="0_6"  symbol-set="[\x65]">
+	<activate-on-match element="0_7"/>
+</state-transition-element>
+<state-transition-element id="0_7"  symbol-set="[\x72]">
+	<activate-on-match element="0_8"/>
+	<activate-on-match element="0_9"/>
+</state-transition-element>
+<state-transition-element id="0_8"  symbol-set="[\x09-\x0d\x20]">
+	<activate-on-match element="0_8"/>
+	<activate-on-match element="0_9"/>
+</state-transition-element>
+<state-transition-element id="0_9"  symbol-set="[\x3a]">
+	<activate-on-match element="0_10"/>
+	<activate-on-match element="0_11"/>
+</state-transition-element>
+</automata-network>
+</anml>

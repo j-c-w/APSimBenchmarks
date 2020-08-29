@@ -1,0 +1,7 @@
+/audit-policy\.jsp\?.*?=([^\x26]*[\x22\x27\x3C\x3E\x28\x29\x3B]|script|src|location|document)/
+/group-summary\.jsp\?.*?=([^\x26]*[\x22\x27\x3C\x3E\x28\x29\x3B]|script|src|location|document)/
+/log\.jsp\?.*?=([^\x26]*[\x22\x27\x3C\x3E\x28\x29\x3B]|script|src|location|document)/
+/logviewer\.jsp\?.*?=([^\x26]*[\x22\x27\x3C\x3E\x28\x29\x3B]|script|src|location|document)/
+/muc-room-edit-form\.jsp\?.*?=([^\x26]*[\x22\x27\x3C\x3E\x28\x29\x3B]|script|src|location|document)/
+/server-properties\.jsp\?.*?=([^\x26]*[\x22\x27\x3C\x3E\x28\x29\x3B]|script|src|location|document)/
+/user-properties\.jsp\?.*?=([^\x26]*[\x22\x27\x3C\x3E\x28\x29\x3B]|script|src|location|document)/

@@ -1,0 +1,3 @@
+/^Cache-Control\x3A\s*(max-(age|stale)|min-fresh|s-maxage)\s*\x3D[^\d]+\x0A/
+/cid=[^&]/
+/ldap\x3A\x2F\x2F[^\x0A]*(%3f|\x3F)[^\x0A]*(%3f|\x3F)[^\x0A]*(%3f|\x3F)[^\x0A]*(%3f|\x3F)/

@@ -1,0 +1,6 @@
+/^.{13,29}[bcdfghjklmnpqrstvwxz]{5}/
+/\x03ns1\x0aboxonline[\x31-\x33]\x03(com|net|org)\x00/
+/[\x05-\x20][bcdfghjklmnpqrstvwxyz]{5,32}[^\x00]*?\x02cn\x00/
+/[\x05-\x20][bcdfghjklmnpqrstvwxyz]{5,32}[^\x00]*?\x02ru\x00/
+/[\x05-\x20][bcdfghjklmnpqrstvwxyz]{5,32}([\x01-\x20].*?|)\x02cc\x00/
+/(((\x06dyndns|\x02yi)\x03org)|((\x07dynserv|\x04mooo)\x03com))/

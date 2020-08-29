@@ -1,0 +1,1 @@
+/^(NT|CallBack|SID|TimeOut)\s*\x3a\s*[^\n]{512}/

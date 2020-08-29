@@ -1,0 +1,3 @@
+/^Directory/
+/^Entry \/file\/[0-9.]{71,}\/\/.*\x0aannotate\x0a/
+/^Max-dotdot[\s\r\n]*\d{3,}/

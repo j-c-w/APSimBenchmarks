@@ -1,0 +1,4 @@
+/^Cookie\x3A\s+[^\r\n]*dun_other\s*=\s*[^\r\n]+/
+/^Host\x3A[^\r\n]*trustyfiles\x2Ecom/
+/^User-Agent\x3A[^\r\n]*UtilMind\s+HTTPGet/
+/\x3Fp\x3D[0-9]{1,10}\x26d\x3D/
