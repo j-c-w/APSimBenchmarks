@@ -42,34 +42,55 @@ def identifier(proto, inp_cat, inp_ports, out_ports):
 # return the identifiers of any supercategories (i.e. any other
 # categories that have to be run also)
 def compute_supercategories(proto, inp_cat, inp_ports, out_ports):
+    # Just takes some elbow grease to write all these down.
+    assert False
+    protos = [proto, "all"]
+    inp_cats = [inp_cat, "any"]
+    inp_ports = [inp_ports, SUPPORTED_INP_PORTS[0]]
+    out_ports = [out_ports, SUPPORTED_OUT_PORTS[0]]
     return [identifier("all", "any"), identifier("all", inp_cat), identifier(proto, "any")]
 
 def compute_group_tuples():
     for proto in SUPPORTED_PROTOCOLS:
         for in_cat in SUPPORTED_IP_CLASSES:
-            yield (proto, in_cat)
+            for src_prt in SUPPORTED_INP_PORTS:
+                for dst_prt in SUPPORTED_OUT_PORTS:
+                    yield (proto, in_cat, src_prt, dst_prt)
 
 def get_group_identifiers():
     for tup in compute_group_tuples():
         yield identifier(*tup)
 
 class GroupClassifier():
-    def __init__(self):
+    def __init__(self, use_supercats):
         self.regexes = {}
+        self.use_supercats = use_supercats
         for ident in get_group_identifiers():
             self.regexes[ident] = []
 
     def add(self, proto, src_ip_class, src_port, dst_ports, regex):
-        self.regexes[identifier(proto, src_ip_class, src_port, dst_ports)].append(regex)
+        ident = identifier(proto, src_ip_class, src_port, dst_ports)
+        if ident in self.regexes:
+            self.regexes[ident].append(regex)
+        else:
+            if src_port not in SUPPORTED_INP_PORTS:
+                SUPPORTED_INP_PORTS.append(src_port)
+            if dst_ports not in SUPPORTED_OUT_PORTS:
+                SUPPORTED_OUT_PORTS.append(dst_ports)
+            self.regexes[ident] = [regex]
 
-    def get_category(self, proto, src_ip_class):
+    def get_category(self, proto, src_ip_class, src_prt, dst_prt):
         # Return the category --- with one modification, 
         # that we also add all the sub-categories.
-        regexes = self.regexes[identifier(proto, src_ip_class)][:]
-        super_regexes_cats = compute_supercategories(proto, src_ip_class)
+        ident = identifier(proto, src_ip_class, src_prt, dst_prt) 
+        if not ident in self.regexes:
+            return []
+        regexes = self.regexes[ident][:]
+        if self.use_supercats:
+            super_regexes_cats = compute_supercategories(proto, src_ip_class, src_prt, dst_prt)
 
-        for cat in super_regexes_cats:
-            regexes += self.regexes[cat][:]
+            for cat in super_regexes_cats:
+                regexes += self.regexes[cat][:]
 
         return regexes
 
@@ -88,9 +109,9 @@ class GroupClassifier():
 # If any one of these is different, then we have a new group :)
 # For now we are just lookup at protocol. (tcp, udp, icmp)
 # We expect to get more overlap with IP/port nos.
-def extract_groups_from(input_file):
+def extract_groups_from(input_file, use_supercats):
     rules = rule.parse_file(input_file)
-    groups = GroupClassifier()
+    groups = GroupClassifier(use_supercats)
 
     for snort_rule in rules:
         header = snort_rule.header.split(" ")
@@ -118,6 +139,9 @@ def extract_groups_from(input_file):
         src_ports = header[3]
         dst_ports = header[6]
 
+        if ":" in src_ports or ":" in dst_ports or "," in src_ports or "," in dst_ports or "[" in src_ports or "[" in dst_ports:
+            continue
+
         # TODO --- Do something about ports, which generally
         # have a wider range...
 
@@ -133,8 +157,9 @@ def write_groups_to(groups, outfolder):
         regexes = groups.get_category(*group_id)
         ident = identifier(*group_id).replace("$", "")
 
-        with open(outfolder + "/" + ident, "w") as f:
-            f.write("\n".join(regexes))
+        if len(regexes) > 0:
+            with open(outfolder + "/" + ident, "w") as f:
+                f.write("\n".join(regexes))
 
 
 # This is a script that, given an input Snort rulefile, produces
@@ -143,10 +168,11 @@ def write_groups_to(groups, outfolder):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument('--no-supercat', default=False, action='store_true', dest='supercat')
     parser.add_argument('input_file')
     parser.add_argument('output_folder')
 
     args = parser.parse_args()
 
-    groups = extract_groups_from(args.input_file)
+    groups = extract_groups_from(args.input_file, args.supercat)
     write_groups_to(groups, args.output_folder)
