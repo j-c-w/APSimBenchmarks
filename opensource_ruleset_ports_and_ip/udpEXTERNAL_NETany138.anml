@@ -1,125 +1,22 @@
 <anml version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <automata-network id="vasim">
-<state-transition-element id="0_10"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="0_11"/>
-</state-transition-element>
-<state-transition-element id="0_11"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="0_12"/>
-</state-transition-element>
-<state-transition-element id="0_12"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="0_13"/>
-</state-transition-element>
-<state-transition-element id="0_13"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<report-on-match reportcode="0"/>
-</state-transition-element>
-<state-transition-element id="0_4"  symbol-set="[\x00-\x09\x0b-\xff]"  start="start-of-data">
+<state-transition-element id="0_4"  symbol-set="[\x00]"  start="all-input">
 	<activate-on-match element="0_5"/>
 </state-transition-element>
-<state-transition-element id="0_5"  symbol-set="[\x00-\x09\x0b-\xff]">
+<state-transition-element id="0_5"  symbol-set="[\x2e]">
 	<activate-on-match element="0_6"/>
 </state-transition-element>
-<state-transition-element id="0_6"  symbol-set="[\x00-\x09\x0b-\xff]">
+<state-transition-element id="0_6"  symbol-set="[\x00]">
 	<activate-on-match element="0_7"/>
 </state-transition-element>
-<state-transition-element id="0_7"  symbol-set="[\x00-\x09\x0b-\xff]">
+<state-transition-element id="0_7"  symbol-set="[\x2e]">
 	<activate-on-match element="0_8"/>
 </state-transition-element>
-<state-transition-element id="0_8"  symbol-set="[\x00-\x09\x0b-\xff]">
+<state-transition-element id="0_8"  symbol-set="[\x00]">
 	<activate-on-match element="0_9"/>
 </state-transition-element>
-<state-transition-element id="0_9"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="0_10"/>
-</state-transition-element>
-<state-transition-element id="1_10"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_11"/>
-</state-transition-element>
-<state-transition-element id="1_11"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_12"/>
-</state-transition-element>
-<state-transition-element id="1_12"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_13"/>
-</state-transition-element>
-<state-transition-element id="1_13"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_14"/>
-</state-transition-element>
-<state-transition-element id="1_14"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_15"/>
-</state-transition-element>
-<state-transition-element id="1_15"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_16"/>
-	<activate-on-match element="1_20"/>
-</state-transition-element>
-<state-transition-element id="1_16"  symbol-set="[\x00]">
-	<activate-on-match element="1_17"/>
-</state-transition-element>
-<state-transition-element id="1_17"  symbol-set="[\x00]">
-	<activate-on-match element="1_18"/>
-</state-transition-element>
-<state-transition-element id="1_18"  symbol-set="[\x00]">
-	<activate-on-match element="1_19"/>
-</state-transition-element>
-<state-transition-element id="1_19"  symbol-set="[\x00]">
-	<report-on-match reportcode="1"/>
-</state-transition-element>
-<state-transition-element id="1_20"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_21"/>
-</state-transition-element>
-<state-transition-element id="1_21"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_22"/>
-</state-transition-element>
-<state-transition-element id="1_22"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_23"/>
-</state-transition-element>
-<state-transition-element id="1_23"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_24"/>
-</state-transition-element>
-<state-transition-element id="1_24"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_25"/>
-</state-transition-element>
-<state-transition-element id="1_25"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_26"/>
-</state-transition-element>
-<state-transition-element id="1_26"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_27"/>
-</state-transition-element>
-<state-transition-element id="1_27"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_28"/>
-</state-transition-element>
-<state-transition-element id="1_28"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_29"/>
-</state-transition-element>
-<state-transition-element id="1_29"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_30"/>
-</state-transition-element>
-<state-transition-element id="1_30"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_31"/>
-</state-transition-element>
-<state-transition-element id="1_31"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<report-on-match reportcode="1"/>
-</state-transition-element>
-<state-transition-element id="1_4"  symbol-set="[\x00-\x09\x0b-\xff]"  start="start-of-data">
-	<activate-on-match element="1_5"/>
-</state-transition-element>
-<state-transition-element id="1_5"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_6"/>
-</state-transition-element>
-<state-transition-element id="1_6"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_7"/>
-</state-transition-element>
-<state-transition-element id="1_7"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_8"/>
-</state-transition-element>
-<state-transition-element id="1_8"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_9"/>
-</state-transition-element>
-<state-transition-element id="1_9"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="1_10"/>
-</state-transition-element>
-<state-transition-element id="2_4"  symbol-set="[\x00-\x09\x0b-\xff]"  start="start-of-data">
-	<activate-on-match element="2_5"/>
-</state-transition-element>
-<state-transition-element id="2_5"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<report-on-match reportcode="2"/>
+<state-transition-element id="0_9"  symbol-set="[\x2f\x5c]">
+	<report-on-match reportcode="0"/>
 </state-transition-element>
 </automata-network>
 </anml>

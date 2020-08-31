@@ -1,3 +1,1 @@
-/(<[^>]+>)\1{19}/
 /filename=[\x22\x27]?.{1,221}\.(vbs|exe|scr|pif|bat)/
-/^URL\x3b\w+\x3amailto\x3a[^\n]*%[^\n]*\.(cmd|bat)/

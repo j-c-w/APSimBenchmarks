@@ -1,5 +1,2 @@
-/^.{12}(\x00|\x01)\x00\x00(\x70|\x71)/
-/insert\s+into\s+(\w+)\s+values\s*\(\s*null\s*\).*select\s+isnull\s*\(\s*\w+\s*,\s*(\x27\x27|\x22\x22)\s*\)\s*from\s+\1/
-/select\s+convert\s*\(\w+(\(\d+\))?\s*,\s*((\w+|\w+\(.*\)|\w+\.\w+|\([^\)]*\))|(\w+|\w+\(.*\)|\w+\.\w+|\([^\)]*\))\s*(ALL|AND|ANY|BETWEEN|EXISTS|IN|LIKE|NOT|OR|SOME|=|\+|>|<|\/|%|\*|-||&|\||\^|~|>=|<>|<=|\!=|\!<|\!>)\s*(\w+|\w+\(.*\)|\w+\.\w+|\([^\)]*\)))\s*,\s*\d{5,}\s*\)/
 /set\s+ansi_padding\s+off/
 /s\x00e\x00t\x00(\s\x00)+a\x00n\x00s\x00i\x00_\x00p\x00a\x00d\x00d\x00i\x00n\x00g\x00(\s\x00)+o\x00f\x00f\x00/

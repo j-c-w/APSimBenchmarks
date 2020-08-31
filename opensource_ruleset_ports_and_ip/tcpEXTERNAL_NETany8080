@@ -1,9 +1,4 @@
 /\/%2E%2E(\\|%5C)\//
 /\/(\\|%5C)%2E%2E\//
-/^Authorization\x3a\s*Basic\s+(?-i)YWRtaW46YWRtaW4[=\s]/
-/^Authorization\x3a(\s*|\s*\r?\n\s+)Basic\s+OmFkbWlu/
-/^Content-Length\x3a(?!\x0d\x0a\x0d\x0a).*?^Content-Length\x3a/
-/(((DestFile|encryptPass)\x3D[^\x26]{50})|((BaseDN|SearchFilter)\x3D[^\x26]{128}))/
-/^(password|admin|tomcat)\x3a(password|admin|tomcat)/
 /path\x3d(\x2e\x2e|\x2f\x2e\x2e)/
 /TMlogonEncrypted=(\!|\%21)CRYPT(\!|\%21)[A-Z0-9]{512}/
