@@ -10,6 +10,10 @@ while [[ $# -ne 0 ]]; do
 	f=$1
 	shift
 
+	if [[ $f == *.anml ]] || [[ $f == *.mnrl ]]; then
+		continue
+	fi
+
 	pcre2mnrl $f $f.mnrl
 	vasim $f.mnrl -a
 	mv automata_0.anml $f.anml
