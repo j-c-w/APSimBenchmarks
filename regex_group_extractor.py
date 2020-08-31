@@ -14,8 +14,35 @@ def is_valid_pcre(pcre):
     # pcre isn't valid, it should be skipped.
     # The problem is, I don't want to parse the PCRE, so just put in
     # enough hacks until it works.
+    # Broken VAsim tool.
     if "(?P=" in pcre:
         return False
+    if "?=" in pcre:
+        return False
+    # Broken vasim tool
+    if "?!\\n" in pcre:
+        return False
+    if "?!" in pcre:
+        return False
+
+    # Back references are unsupported (pcre2mnrl)
+    if "\\1" in pcre:
+        return False
+
+    # pcre2mnrl doesn't seem to fully support things that match
+    # an empty buffer.
+    if "/|" in pcre or "|/" in pcre:
+        return False
+
+    # Embedded start anchors not supported in vasim.
+    # embedded start anchor means '^' not in a character
+    # class.
+    last_character = None
+    for character in pcre:
+        if character == "^":
+            if last_character is not None or last_character != "[":
+                return False
+        last_character = character
 
     return True
 
