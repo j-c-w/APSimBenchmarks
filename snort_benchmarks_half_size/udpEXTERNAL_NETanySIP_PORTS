@@ -1,0 +1,3 @@
+/Contact\x3A\s*\x3C\s*\x3E/
+/Contact\x3A\x0D\x0A/
+/Expires\x3a\s*([89]\d{2,}|\d{4,})/

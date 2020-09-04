@@ -1,0 +1,7 @@
+/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{13}\x28\x0A\x51/
+/\/3001[0-9A-F]{262,304}/
+/\d+\x2d{2}\r\n$/
+/\/index\d{9}\.asp/
+/index\x2easpx\x3f[0-9a-fA-F]{2}\x3d\d{1,7}I\d{1,10}/
+/\s\:Hello everyone,\s.*?\shere\sand\si'm\shere\sand\sready\sto\sDDoS\./
+/\x2Faws\d{1,5}\.jsp\x3F/

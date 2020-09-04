@@ -1,0 +1,4 @@
+/\/%2E%2E(\\|%5C)\//
+/\/(\\|%5C)%2E%2E\//
+/path\x3d(\x2e\x2e|\x2f\x2e\x2e)/
+/TMlogonEncrypted=(\!|\%21)CRYPT(\!|\%21)[A-Z0-9]{512}/

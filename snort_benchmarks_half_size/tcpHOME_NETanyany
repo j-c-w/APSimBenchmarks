@@ -1,0 +1,15 @@
+/\/[0-9a-f]{32}\.html\ HTTP\/1/
+/(\d{1,3}\x2e){3}\d{1,3}/
+/Host\x3A\x20[0-9\x3A\x2E]{9,21}\x0D\x0A/
+/index.php\?[0-9a-f]{32}$/
+/iptest\=(\d{1,3}\.){3}\d{1,3}(\x3B|\x253b)/
+/KEEPALIVE\d{7}/
+/M[\x62-\x66](?:M[\x5f\x60]){3}M/
+/ShadowNet\s+Remote\s+Web\s+Based\s+Spyware/
+/Theef2\s+FTP\s+Server\x3A/
+/Troyano\s+Apofis\s+1\x2E0/
+/x00externalx3dd{5,10}/
+/\x2Exspf(\?\x5C\x2F]|$)/
+/\x2f\d{0,10}\x2efunctions HTTP\x2f/
+/\x3Ctitle\x3ETroya\s+\x2D\s+by\s+Sma\s+Soft\x3C\x2Ftitle\x3E/
+/\x7C\d+\x2E\d+\x2E\d+\x2E\d+\x7C.*\x7CYuri\s+v1\x2E\d+\x7C/

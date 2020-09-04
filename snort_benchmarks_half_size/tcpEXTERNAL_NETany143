@@ -1,0 +1,8 @@
+/\sCREATE\s*\{/
+/\sDELETE\s*\S*\x2e\x2e\x2f/
+/\sEXAMINE\s*\S*\x2e\x2e\x2f/
+/\sLIST\s*\S*\x2e\x2e\x2f/
+/\sLSUB\s*\S*\x2e\x2e\x2f/
+/\sRENAME\s*\S*\x2e\x2e\x2f/
+/\sSTATUS\s*\S*\x2e\x2e\x2f/
+/\sUNSUBSCRIBE\s*\S*\x2e\x2e\x2f/
