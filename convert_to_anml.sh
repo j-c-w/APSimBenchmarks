@@ -16,6 +16,8 @@ while [[ $# -ne 0 ]]; do
 
 	pcre2mnrl $f $f.mnrl
 	vasim $f.mnrl -a
-	mv automata_0.anml $f.anml
+	if [[ -f automata_0.anml ]]; then
+		mv automata_0.anml $f.anml
+	fi
 	rm $f.mnrl
 done
