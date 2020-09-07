@@ -1,0 +1,3 @@
+/\/muieblackcat$/
+/([\w\x25]+=[\w\x25]*&){500}/
+/[\x26\x3F]act=(cmd|search|upload|about|encoder|bind|ps_aux|ftpquickbrute|security|sql|eval|feedback|selfremove|fsbuff|ls|phpinfo)/

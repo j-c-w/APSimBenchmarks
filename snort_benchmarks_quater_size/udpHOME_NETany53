@@ -1,0 +1,2 @@
+/\x03ns1\x0aboxonline[\x31-\x33]\x03(com|net|org)\x00/
+/(((\x06dyndns|\x02yi)\x03org)|((\x07dynserv|\x04mooo)\x03com))/

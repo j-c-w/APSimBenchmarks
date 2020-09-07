@@ -1,0 +1,25 @@
+/(0x2d|055|45),\s*(0x31|061|49),\s*(0x30|060|48),\s*(0x30|060|48),\s*(0x30|060|48),\s*(0x63|0143|99),\s*(0x6D|0155|109)/
+/ActiveXObject\(\s*?[\x22\x27]?\s*?BIDIB\.BIDIBCtrl/
+/ActiveXObject\(\s*?[\x22\x27]?\s*?ienipp\.Novell\siPrint\sControl/
+/ActiveXObject\(\s*?[\x22\x27]?\s*?KeyHelp\.KeyScript/
+/ActiveXObject\(\s*?[\x22\x27]\s*?LPViewer\.LPViewer\.1/
+/ActiveXObject\(\s*?[\x22\x27]?\s*?MSMask\.MaskEdBox/
+/ActiveXObject\(\s*?[\x22\x27]?\s*?Ultra\.OfficeControl/
+/ActiveXObject\(\s*?[\x22\x27]?\s*?WebexUCFObject\.WebexUCFObject/
+/ActiveXObject\(\s*?[\x22\x27]?\s*?WMEnc\.WMEncProfileManager/
+/appendChild\x28\s*document\x2ecreateElement\x28\s*[\x22\x27]button[\x22\x27].*?outerText\s*=\s*[\x22\x27]{2}/
+/body\x3e\x3cdiv\s[a-z]{3}\x3d\x22[a-z]{3}\x22/
+/-chrome\s*javascript/
+/expression\s*\x28\s*document\x2eselection\x2eempty\s*\x28\s*\x29\s*\x29/
+/\.getElements?By(Id|TagName)\x28\s*[\x22\x27]caption[\x22\x27]\s*\x29.*?innerHTML\s*\x3d\s*[\x22\x27]\x3cthead/
+/hwehes[a-z0-9]{15,22}hwehes/
+/<input value=[\x22\x27][\x80-\xa0\xe0-\xff][\x22\x27]/
+/onbeforeeditfocus\s*=\s*[\x22\x27]document\x2e/
+/<\s*style\s*>\s*\w+\s*\{\s*(\w+|\w+-\w+)\s*\:\s*\w+\s*\(.*?(\s*\x27\s*|\s*\&\#39\;\s*|\s*\&\#x27\;\s*|\s*\\u0027\;\s*){1}.*?\)\s*(\s*\x27\s*|\s*\&\#39\;\s*|\s*\&\#x27\;\s*|\s*\\u0027\;\s*){3,}.*?\}|(\s*\x27\s*|\s*\&\#39\;\s*|\s*\&\#x27\;\s*|\s*\\u0027\;\s*){1,}.*?\}\s*(\s*\x27\s*|\s*\&\#39\;\s*|\s*\&\#x27\;\s*|\s*\\u0027\;\s*){3,}/
+/table\x3aafter\s*\x7b.*?display\s*\x3a\s*table-(footer|header|row)-group\x3b/
+/\x28\s*\w+\s*\x29/
+/\x2edefinition\s*\x28/
+/\x2eexecCommand\s*\x28\s*[\x22\x27]\s*undo\s*[\x22\x27].*?\x2eexecCommand\s*\x28\s*[\x22\x27]\s*redo\s*[\x22\x27].*?\x2eexecCommand\s*\x28\s*[\x22\x27]\s*undo\s*[\x22\x27]/
+/\x2esetUserdata\x28.*?\x2eappendchild\x28/
+/\x3cscript.*documentElement\x2e(height|preserveAspectRatio|viewBox|width|x|y)/
+/\xFA\xFF\xDA\x00\x0C\x03((\x00.\x01.\x02)|(\x01.\x02.\x03)|(\x01.\x04.\x05))/
