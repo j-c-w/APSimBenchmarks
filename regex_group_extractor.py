@@ -19,6 +19,15 @@ def is_valid_pcre(pcre):
         return False
     if "?=" in pcre:
         return False
+    # Atomic groups not supported by vasim
+    if "(?>" in pcre:
+        return False
+    # Possisive quantifiers not supported by vasim
+    if "}+" in pcre:
+        return False
+    # VAsim doesn't support backreferences
+    if "(.)" in pcre:
+        return False
     # Broken vasim tool
     if "?!\\n" in pcre:
         return False
