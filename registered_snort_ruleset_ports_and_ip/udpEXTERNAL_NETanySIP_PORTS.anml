@@ -1,0 +1,118 @@
+<anml version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<automata-network id="vasim">
+<state-transition-element id="0_10"  symbol-set="[\x74]">
+	<activate-on-match element="0_11"/>
+</state-transition-element>
+<state-transition-element id="0_11"  symbol-set="[\x3a]">
+	<activate-on-match element="0_12"/>
+	<activate-on-match element="0_13"/>
+</state-transition-element>
+<state-transition-element id="0_12"  symbol-set="[\x09-\x0d\x20]">
+	<activate-on-match element="0_12"/>
+	<activate-on-match element="0_13"/>
+</state-transition-element>
+<state-transition-element id="0_13"  symbol-set="[\x3c]">
+	<activate-on-match element="0_14"/>
+	<activate-on-match element="0_15"/>
+</state-transition-element>
+<state-transition-element id="0_14"  symbol-set="[\x09-\x0d\x20]">
+	<activate-on-match element="0_14"/>
+	<activate-on-match element="0_15"/>
+</state-transition-element>
+<state-transition-element id="0_15"  symbol-set="[\x3e]">
+	<report-on-match reportcode="0"/>
+</state-transition-element>
+<state-transition-element id="0_4"  symbol-set="[\x43]"  start="all-input">
+	<activate-on-match element="0_5"/>
+</state-transition-element>
+<state-transition-element id="0_5"  symbol-set="[\x6f]">
+	<activate-on-match element="0_6"/>
+</state-transition-element>
+<state-transition-element id="0_6"  symbol-set="[\x6e]">
+	<activate-on-match element="0_7"/>
+</state-transition-element>
+<state-transition-element id="0_7"  symbol-set="[\x74]">
+	<activate-on-match element="0_8"/>
+</state-transition-element>
+<state-transition-element id="0_8"  symbol-set="[\x61]">
+	<activate-on-match element="0_9"/>
+</state-transition-element>
+<state-transition-element id="0_9"  symbol-set="[\x63]">
+	<activate-on-match element="0_10"/>
+</state-transition-element>
+<state-transition-element id="1_10"  symbol-set="[\x74]">
+	<activate-on-match element="1_11"/>
+</state-transition-element>
+<state-transition-element id="1_11"  symbol-set="[\x3a]">
+	<activate-on-match element="1_12"/>
+</state-transition-element>
+<state-transition-element id="1_12"  symbol-set="[\x0d]">
+	<activate-on-match element="1_13"/>
+</state-transition-element>
+<state-transition-element id="1_13"  symbol-set="[\x0a]">
+	<report-on-match reportcode="1"/>
+</state-transition-element>
+<state-transition-element id="1_4"  symbol-set="[\x43]"  start="all-input">
+	<activate-on-match element="1_5"/>
+</state-transition-element>
+<state-transition-element id="1_5"  symbol-set="[\x6f]">
+	<activate-on-match element="1_6"/>
+</state-transition-element>
+<state-transition-element id="1_6"  symbol-set="[\x6e]">
+	<activate-on-match element="1_7"/>
+</state-transition-element>
+<state-transition-element id="1_7"  symbol-set="[\x74]">
+	<activate-on-match element="1_8"/>
+</state-transition-element>
+<state-transition-element id="1_8"  symbol-set="[\x61]">
+	<activate-on-match element="1_9"/>
+</state-transition-element>
+<state-transition-element id="1_9"  symbol-set="[\x63]">
+	<activate-on-match element="1_10"/>
+</state-transition-element>
+<state-transition-element id="2_10"  symbol-set="[\x50]">
+	<activate-on-match element="2_11"/>
+</state-transition-element>
+<state-transition-element id="2_11"  symbol-set="[\x2f]">
+	<activate-on-match element="2_12"/>
+</state-transition-element>
+<state-transition-element id="2_12"  symbol-set="[\x32]">
+	<activate-on-match element="2_13"/>
+</state-transition-element>
+<state-transition-element id="2_13"  symbol-set="[\x00-\x09\x0b-\xff]">
+	<activate-on-match element="2_14"/>
+</state-transition-element>
+<state-transition-element id="2_14"  symbol-set="[\x30]">
+	<activate-on-match element="2_15"/>
+</state-transition-element>
+<state-transition-element id="2_15"  symbol-set="[\x0d]">
+	<activate-on-match element="2_16"/>
+</state-transition-element>
+<state-transition-element id="2_16"  symbol-set="[\x0a]">
+	<report-on-match reportcode="2"/>
+</state-transition-element>
+<state-transition-element id="2_4"  symbol-set="[\x3b]"  start="all-input">
+	<activate-on-match element="2_5"/>
+	<activate-on-match element="2_6"/>
+</state-transition-element>
+<state-transition-element id="2_5"  symbol-set="[\x09]">
+	<activate-on-match element="2_5"/>
+	<activate-on-match element="2_6"/>
+</state-transition-element>
+<state-transition-element id="2_6"  symbol-set="[\x30-\x39\x41-\x5a\x61-\x7a]">
+	<activate-on-match element="2_6"/>
+	<activate-on-match element="2_7"/>
+	<activate-on-match element="2_8"/>
+</state-transition-element>
+<state-transition-element id="2_7"  symbol-set="[\x09\x20]">
+	<activate-on-match element="2_7"/>
+	<activate-on-match element="2_8"/>
+</state-transition-element>
+<state-transition-element id="2_8"  symbol-set="[\x53]">
+	<activate-on-match element="2_9"/>
+</state-transition-element>
+<state-transition-element id="2_9"  symbol-set="[\x49]">
+	<activate-on-match element="2_10"/>
+</state-transition-element>
+</automata-network>
+</anml>

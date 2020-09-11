@@ -1,0 +1,1 @@
+/SELECT INTERVAL\s+\x27@\s+\x2b\d{5,}\s+years.*?\x2b\d{5,}\s+days/

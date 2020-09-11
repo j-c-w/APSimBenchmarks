@@ -1,0 +1,9 @@
+/IN\s*\x28\s*NULL\s*\x2C\s*[0-9a-z\x24\x5F\x60]/
+/\x03create\s+(aggregate\s+)*function/
+/\x03create\s+(aggregate\s+)*function\s+\S{50}/
+/\x03create\s+function\s+sys_(exec|eval|get|bineval|set)\s+returns/
+/\x03drop\s+function(\s+if\s+exists)*\s+sys_(exec|eval|get|bineval|set)/
+/\x03select\s+sys_(exec|eval|get|bineval|set)/
+/extractvalue.*?number\s*\x28\s*\x29/
+/into\s+dumpfile/
+/where\s+name\s+\x3D\s+[\x22\x27]sys_(exec|eval|get|bineval|set)/

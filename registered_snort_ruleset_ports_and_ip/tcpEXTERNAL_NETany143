@@ -1,0 +1,3 @@
+/\sCREATE\s*\{/
+/\sLIST\s*\S*\x2e\x2e\x2f/
+/\sSTATUS\s*\S*\x2e\x2e\x2f/

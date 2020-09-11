@@ -1,0 +1,57 @@
+<anml version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<automata-network id="vasim">
+<state-transition-element id="0_4"  symbol-set="[\x21\x23-\x25\x2a-\x2b\x3a\x3c\x3e-\x3f\x5b\x5d-\x60\x7b-\x7d]"  start="all-input">
+	<activate-on-match element="0_5"/>
+</state-transition-element>
+<state-transition-element id="0_5"  symbol-set="[\x21\x23-\x25\x2a-\x2b\x3a\x3c\x3e-\x3f\x5b\x5d-\x60\x7b-\x7d]">
+	<report-on-match reportcode="0"/>
+</state-transition-element>
+<state-transition-element id="1_10"  symbol-set="[\x00]">
+	<activate-on-match element="1_11"/>
+</state-transition-element>
+<state-transition-element id="1_11"  symbol-set="[\x01]">
+	<activate-on-match element="1_12"/>
+</state-transition-element>
+<state-transition-element id="1_12"  symbol-set="[\x00-\x09\x0b-\xff]">
+	<activate-on-match element="1_13"/>
+</state-transition-element>
+<state-transition-element id="1_13"  symbol-set="[\x00-\x09\x0b-\xff]">
+	<activate-on-match element="1_14"/>
+</state-transition-element>
+<state-transition-element id="1_14"  symbol-set="[\x00-\x09\x0b-\xff]">
+	<activate-on-match element="1_15"/>
+</state-transition-element>
+<state-transition-element id="1_15"  symbol-set="[\x40]">
+	<activate-on-match element="1_16"/>
+</state-transition-element>
+<state-transition-element id="1_16"  symbol-set="[\x2b\x2f-\x39\x61-\x7a]">
+	<activate-on-match element="1_16"/>
+	<activate-on-match element="1_17"/>
+</state-transition-element>
+<state-transition-element id="1_17"  symbol-set="[\x40]">
+	<report-on-match reportcode="1"/>
+	<activate-on-match element="1_18"/>
+</state-transition-element>
+<state-transition-element id="1_18"  symbol-set="[\x0a]">
+	<report-on-match reportcode="1"/>
+</state-transition-element>
+<state-transition-element id="1_4"  symbol-set="[\x00]"  start="all-input">
+	<activate-on-match element="1_5"/>
+</state-transition-element>
+<state-transition-element id="1_5"  symbol-set="[\x10]">
+	<activate-on-match element="1_6"/>
+</state-transition-element>
+<state-transition-element id="1_6"  symbol-set="[\x00]">
+	<activate-on-match element="1_7"/>
+</state-transition-element>
+<state-transition-element id="1_7"  symbol-set="[\x01]">
+	<activate-on-match element="1_8"/>
+</state-transition-element>
+<state-transition-element id="1_8"  symbol-set="[\x00]">
+	<activate-on-match element="1_9"/>
+</state-transition-element>
+<state-transition-element id="1_9"  symbol-set="[\x00]">
+	<activate-on-match element="1_10"/>
+</state-transition-element>
+</automata-network>
+</anml>

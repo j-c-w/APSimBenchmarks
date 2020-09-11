@@ -1,0 +1,4 @@
+/addr\x2e\d+\x2c/
+/last\x2e\d+\x2c/
+/mode\s+?\d{4}/
+/unpeer\s*?0/

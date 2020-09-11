@@ -1,0 +1,2 @@
+/<title>Deploy\s*(Enterprise)?\s*Applications/
+/\/\d+\.exe$/

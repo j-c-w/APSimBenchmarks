@@ -1,0 +1,2 @@
+/fn=Eye\d{4}_\d{2}\.log/
+/fn=\x2e\x2e(\x2f|\x5c)/

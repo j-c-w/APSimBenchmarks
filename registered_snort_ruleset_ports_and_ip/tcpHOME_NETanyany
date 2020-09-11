@@ -1,0 +1,25 @@
+/(USER|NICK)\x20BOSS\x2d[A-Z0-9\x5b\x5d\x2d]{15}/
+/(\d{1,3}\x2e){3}\d{1,3}/
+/Cookie: \d{1,5}=[a-zA-Z0-9\x2b\x2f]+=*\r\nUser-Agent:/
+/GET\s\/[\w-]{64}\sHTTP\/1/
+/Host\x3A\x20[0-9\x3A\x2E]{9,21}\x0D\x0A/
+/MODE\sd?u?n?\x7b[AU]\x5c[LD]\x5c(86|64)\x5c\w{0,8}\x5c\w{2,16}\x7d[a-z]{8}\s\x2BpiwksT\x2Dx\x0D\x0A/
+/M[\x62-\x66](?:M[\x5f\x60]){3}M/
+/PRIVMSG #new :\x02\x5b(GOOGLE|SCAN)\x5d\x02\x20Scanning/
+/ShadowNet\s+Remote\s+Web\s+Based\s+Spyware/
+/Theef2\s+FTP\s+Server\x3A/
+/Troyano\s+Apofis\s+1\x2E0/
+/[0-9A-Z]{8}\x3abpass\x0a/
+/\/3\/[A-Z]{2}\/[a-f0-9]{32}\.djvu/
+/\/3\/[A-Z]{2}\/[a-f0-9]{32}\.mkv/
+/\/3\/[A-Z]{2}\/[a-f0-9]{32}\/\d+\.\d+\.\d+\.\d+\//
+/\/3\/[A-Z]{2}\/[a-f0-9]{32}\sHTTP/
+/\/[0-9a-f]{32}\.html\ HTTP\/1/
+/\x2Exspf(\?\x5C\x2F]|$)/
+/\x2f\d{1,10}\x2efunctions HTTP\x2f/
+/\x3Ctitle\x3ETroya\s+\x2D\s+by\s+Sma\s+Soft\x3C\x2Ftitle\x3E/
+/\x77\x2a\x00\x28[a-f0-9]{40}/
+/\x7C\d+\x2E\d+\x2E\d+\x2E\d+\x7C.*\x7CYuri\s+v1\x2E\d+\x7C/
+/filename=(CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9]|CLOCK\x24)/
+/index.php\?[0-9a-f]{32}$/
+/x00externalx3dd{5,10}/
