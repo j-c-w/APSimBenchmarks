@@ -1,1 +1,2 @@
 /\<title\>Actual\s+Spy\s+software\s+report\<\x2Ftitle\>/
+/^version\s+\d+\x2E\d+\s+key\x3a/

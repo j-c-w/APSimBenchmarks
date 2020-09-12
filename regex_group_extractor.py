@@ -1,6 +1,7 @@
 import argparse
 import os
 from idstools import rule
+not_valid = 0
 
 SUPPORTED_PROTOCOLS = ["all", "tcp", "udp", "icmp"]
 SUPPORTED_IP_CLASSES = ["any", "$HOME_NET", "$EXTERNAL_NET"]
@@ -22,10 +23,13 @@ def is_valid_pcre(pcre):
     # Atomic groups not supported by vasim
     if "(?>" in pcre:
         return False
+    # I think this was causing issues with zero-width assertions?
+    if "?<!" in pcre:
+        return False
     # Possisive quantifiers not supported by vasim
     if "}+" in pcre:
         return False
-    # VAsim doesn't support backreferences
+    # VAsim doesn't support backreferences -- can't find the backreference on the regex with this though.
     if "(.)" in pcre:
         return False
     # Broken vasim tool
@@ -34,8 +38,30 @@ def is_valid_pcre(pcre):
     if "?!" in pcre:
         return False
 
+    # Exclude a particular PCRE in the snort set that doesn't work, but where I can't actually find the part that is broken in VAsim
+    if "(^P" in pcre:
+        return False
+    if "(^Accept:" in pcre:
+        return False
+    if "(^[^\\r\\n]+?\\r" in pcre:
+        return False
+    if "(\\x26|$)" in pcre:
+        return False
+    if "(^P" in pcre:
+        return False
+    if "(^a\\x3Drtpmap" in pcre:
+        return False
+    if "(^|&)*?" in pcre:
+        return False
+
     # Back references are unsupported (pcre2mnrl)
     if "\\1" in pcre:
+        return False
+    if "\\2" in pcre:
+        return False
+    if "\\5" in pcre:
+        return False
+    if "\\9" in pcre:
         return False
 
     # pcre2mnrl doesn't seem to fully support things that match
@@ -45,15 +71,27 @@ def is_valid_pcre(pcre):
 
     # Embedded start anchors not supported in vasim.
     # embedded start anchor means '^' not in a character
-    # class.
+    # class.  However, a huge number of PCREs have
+    # this character, so we just replace it with \n.
     last_character = None
-    for character in pcre:
+    index = 0
+    chrs = list(pcre)
+    for character in chrs:
         if character == "^":
-            if last_character is not None or last_character != "[":
+            if last_character == '/' or last_character == "[" or last_character == '(' or last_character == '|' or last_character == '\\':
+                pass
+            else:
                 return False
+        if character == "$":
+            if chrs[index + 1] == '/' or chrs[index + 1] == ']' or last_character == '[' or last_character == '\\' or last_character == '|' or last_character == '(' or chrs[index + 1] == ')':
+                pass
+            else:
+                return False
+        index += 1
+
         last_character = character
 
-    return True
+    return "".join(chrs)
 
 def format_pcre(pcre):
     # The PCRE comes wrapped in "'s and sometines is
@@ -154,7 +192,11 @@ def extract_groups_from(input_file, use_supercats):
         if "pcre" not in snort_rule:
             # Don't care about the non regex rules.
             continue
-        if not is_valid_pcre(snort_rule.pcre):
+        # This function reformats the PCRE
+        pcre = is_valid_pcre(snort_rule.pcre)
+        if not pcre:
+            global not_valid
+            not_valid += 1
             # Not a supported PCRE, don't translate
             continue
 
@@ -181,8 +223,9 @@ def extract_groups_from(input_file, use_supercats):
         # TODO --- Do something about ports, which generally
         # have a wider range...
 
-        groups.add(proto, src_ips_type, src_ports, dst_ports, format_pcre(snort_rule.pcre))
+        groups.add(proto, src_ips_type, src_ports, dst_ports, format_pcre(pcre))
 
+    print("Number of rules omitted due to unsupported features is" + str(not_valid))
     return groups
 
 

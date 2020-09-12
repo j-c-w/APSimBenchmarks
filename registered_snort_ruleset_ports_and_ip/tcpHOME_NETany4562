@@ -1,1 +1,2 @@
 /UPDATE\x7c\s*?\d{1,2}\x3a\d{2}\s+(AM|PM)\s*?\x7c/
+/^QCONNECT\x7c[^\x7c]+?\x7c[^\x7c]+?\x7c[^\x7c]+?\x7c\s*?\d{1,2}\x3a\d{2}\s*?(AM|PM)/

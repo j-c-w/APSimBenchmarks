@@ -1,4 +1,9 @@
+/(((DestFile|encryptPass)\x3D[^\x26]{50})|((BaseDN|SearchFilter)\x3D[^\x26]{128}))/
+/<command[^>]*?>\s*se\s[^<]{256}/
 /TMlogonEncrypted=(\!|\%21)CRYPT(\!|\%21)[A-Z0-9]{512}/
 /\/%2E%2E(\\|%5C)\//
 /\/(\\|%5C)%2E%2E\//
+/^(password|admin|tomcat)\x3a(password|admin|tomcat)/
+/^Authorization\x3a(\s*|\s*\r?\n\s+)Basic\s+OmFkbWlu/
+/^Authorization\x3a\s*Basic\s+(?-i)YWRtaW46YWRtaW4[=\s]/
 /path\x3d(\x2e\x2e|\x2f\x2e\x2e)/

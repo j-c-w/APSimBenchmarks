@@ -1,0 +1,7 @@
+/\x0a\x0d?\x0a[A-Z0-9\x2b\x2f\s]*[^A-Z0-9\x2b\x2f\s\x3d]/
+/^Content-Length\s*\x3A\s*[1-9]/
+/^DESCRIBE\s[^\n]{300}/
+/^LoadTestPassword\x3A[^\r\n]{215}/
+/^Proxy-Require\s*\x3a\s*[^\x0a]{33}/
+/^\s+(rtsp\x3a\x2f{2}|\x2f+)\s+/
+/^\s+?[a-z0-9]+?\x3D[^\x22\x2C]{256}/

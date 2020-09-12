@@ -1,0 +1,2 @@
+/\x2fcxgid\x2f[^\x2f]+?\x2f\d+\x2f\d+\x2findex\.php$/
+/^VERSON\x3a[123]\x7c/

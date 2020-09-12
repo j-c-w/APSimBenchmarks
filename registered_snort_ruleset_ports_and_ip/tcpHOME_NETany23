@@ -1,1 +1,4 @@
 /\xff{32}$/
+/^show (cli|boot|banner).*?\x0d\x0a\s*\|\s*(sec|less)/
+/sh(o|ow)?[^\x7c]*\x7c\s*less?[^\x7c]*\x7c[^\r\n\x00]*([$`{}<>()\x3b]|\x2f?(bin|etc|flash|usr|lib|sys|\x2f?(ba)?sh|boot|config|rc|config))/
+/sh(o|ow)?[^\x7c]*\x7c\s*sec(t?i?o?n?)?[^\x7c]*\x7c[^\r\n\x00]*([$`{}<>()\x3b]|\x2f?(bin|etc|flash|usr|lib|sys|\x2f?(ba)?sh|boot|config|rc|config))/

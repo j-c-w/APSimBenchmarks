@@ -1,0 +1,2 @@
+/SELECT\s*(TO_(DATE|CHAR)|(VARCHAR|TIMESTAMP)_FORMAT)\s*\('[^']*'\s*,\s*''\)/
+/select\s+xmlquery\s*\x28\s*(\x27|\x22)[^\x27\x22]{512}/
