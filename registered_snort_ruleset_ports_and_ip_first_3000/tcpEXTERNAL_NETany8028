@@ -1,0 +1,2 @@
+/\x2fnds[^\r\n]{1000}/
+/^(GET|POST)\s+[^\s]*(\x2fnds|\x2fdhost)[^\n]*\nHost\x3a\s*[^\n]{63}/

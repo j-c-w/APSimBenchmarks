@@ -1,0 +1,16 @@
+/DATE_FORMAT\x28\s*(\x22[^\x22]+\x25[^\x22]*\x22|\x27[^\x27]+\x25[^\x27]*\x27)/
+/IN\s*\x28\s*NULL\s*\x2C\s*[0-9a-z\x24\x5F\x60]/
+/\x03create\s+(aggregate\s+)*function/
+/\x03create\s+(aggregate\s+)*function\s+\S{50}/
+/\x03create\s+function\s+sys_(exec|eval|get|bineval|set)\s+returns/
+/\x03drop\s+function(\s+if\s+exists)*\s+sys_(exec|eval|get|bineval|set)/
+/\x03select\s+sys_(exec|eval|get|bineval|set)/
+/^.{4}\x85\xA2\xBF\x01\x00\x00\x00\x01\x21\x00{23}[^\x00]+\x00(\xFE|\xFF)/
+/^[^\x0D\x0A\x00]{512}/
+/^\s*[\x22\x27]<\w>\s*<\s*[a-z][0-9]\s*>\s*<\s*[a-z][0-9]\s*>\s*<\s*[a-z][0-9]\s*>/
+/extractvalue.*?number\s*\x28\s*\x29/
+/grant\s.+?\son\s[^\.\s]{193}/
+/into\s+dumpfile/
+/select [\x22\x27][^\x22\x27]{0,100}malloc_lib=\S+\.so[\x22\x27]/
+/set\s+global\s+general_log_file\s+=\s+[\x22\x27][^\x22\x27]{0,100}my\.cnf[\x22\x27]/
+/where\s+name\s+\x3D\s+[\x22\x27]sys_(exec|eval|get|bineval|set)/

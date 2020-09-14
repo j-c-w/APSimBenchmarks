@@ -1,0 +1,1 @@
+/PRIVMSG(\s)*?(\w)*?(\s)*?\x3a\x21bot\s*?(@system|sh|bash).*?\x27/

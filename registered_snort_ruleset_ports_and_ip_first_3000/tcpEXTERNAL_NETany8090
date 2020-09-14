@@ -1,0 +1,5 @@
+/^Content-Length\x3a(\s*|\s*\r?\n\s+)-\d+/
+/^User-Agent\x3a[^\n]{216}/
+/fn=Eye\d{4}_\d{2}\.log/
+/fn=\x2e\x2e(\x2f|\x5c)/
+/php.*\x3f[^\n]{256}/

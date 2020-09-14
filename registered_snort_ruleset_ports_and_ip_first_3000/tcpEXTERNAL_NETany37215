@@ -1,0 +1,1 @@
+/<New(Status|Download)URL[^>]*?>[^<]*?([\x60\x3b\x7c\x26]|\x24\x28)/

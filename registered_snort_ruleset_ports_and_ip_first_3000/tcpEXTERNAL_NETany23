@@ -1,0 +1,2 @@
+/T.*?T.*?Y.*?P.*?R.*?O.*?M.*?P.*?T/
+/lan\x20+?traceroute.*?([\x60\x3b\x7c\x26]|[\x3c\x3e\x24]\x28)/

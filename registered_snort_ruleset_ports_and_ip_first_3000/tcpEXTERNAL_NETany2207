@@ -1,0 +1,1 @@
+/^email-from-address=[^\r\n]*?[\x3b\x26]/

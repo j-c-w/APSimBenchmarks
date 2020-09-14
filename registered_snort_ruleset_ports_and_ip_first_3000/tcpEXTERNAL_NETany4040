@@ -1,0 +1,4 @@
+/[?&]id=[^&]*?([\x22\x27\x3c\x3e\x28\x29]|script|onload|src)/
+/[?&]name=[^&]*?([\x22\x27\x3c\x3e\x28\x29]|script|onload|src)/
+/[?&]size=[^&]*?([\x22\x27\x3c\x3e\x28\x29]|script|onload|src)/
+/[?&]type=[^&]*?([\x22\x27\x3c\x3e\x28\x29]|script|onload|src)/

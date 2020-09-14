@@ -1,0 +1,6 @@
+/GET\s+\x2f\w{1,8}\x2farm\x20/
+/GET\s+\x2f\w{1,8}\x2fi486\x20/
+/GET\s+\x2f\w{1,8}\x2fmips(\x20|64\x20|el\x20)/
+/GET\s+\x2f\w{1,8}\x2fpowerpc\x20/
+/GET\s+\x2f\w{1,8}\x2fx86_64\x20/
+/\x2f[A-Z0-9]{6,8}\x2f[A-Z0-9]{6,8}\x2edat/
