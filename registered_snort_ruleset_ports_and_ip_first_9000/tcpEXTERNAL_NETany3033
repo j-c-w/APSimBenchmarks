@@ -1,1 +1,0 @@
-/\x2fEmConfigMigration\x2f[^\s]*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/

@@ -1,1 +1,0 @@
-/FETCH[^\x0a\x0d]+?RFC822\x2eSIZE\x20\d{10}/

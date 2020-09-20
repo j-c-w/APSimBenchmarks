@@ -1,1 +1,0 @@
-/^PUT \x2f_node\x2f.+?\x2f_config\x2f.+?\r\n[\x22\x27]/

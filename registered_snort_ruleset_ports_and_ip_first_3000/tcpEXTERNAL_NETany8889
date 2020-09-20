@@ -1,1 +1,0 @@
-/^Authorization\x3a\s*Basic[^\n]{256}/

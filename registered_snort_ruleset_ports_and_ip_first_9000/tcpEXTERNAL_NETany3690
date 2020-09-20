@@ -1,2 +1,1 @@
-/get-dated-rev\s*\x28\s*([^\x29]{75}|[\s\x20-\x28\x2A-\x7E]{0,74}[^\s\x20-\x7E])/
 /get-dated-rev\x20\x28\x20\d*\x3a([^\s\x28]{8}[^T]|[A-Za-z]{3}\s\d{,2}\s[^\s\x28]{4})/

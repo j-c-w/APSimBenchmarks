@@ -1,1 +1,0 @@
-/[?&]bps(Work|Manag)erHost=[^&]*?([\x22\x27\x3c\x3e\x28\x29]|%(25)?(22|27|3c|3e|28|29)|script|onload|src)/

@@ -1,2 +1,0 @@
-/^CON\w{1,10}\d+\xAE[^\r\n]{1,20}\x3B/
-/^SINFO\x3B\d+\x3B/

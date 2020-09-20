@@ -1,7 +1,0 @@
-/(com\x2ebea\x2ecore\x2erepackaged\x2espringframework(\x2eaop\x2easpectj\x2e|beans\x2efactory\x2esupport\x2e|transaction\x2esupport\x2eAbstractPlatformTransactionManager))|(com\x2ebea\x2ecore\x2erepackaged\x2espringframework\x2etransaction\x2ejta\x2eJtaTransactionManager)/
-/^[^\x26\s]*(\x3e|\x253e)/
-/j_password=(welcome1|weblogic|admin)/
-/j_username=(root|system)/
-/java\x2ermi\x2e(server\x2e(Unicast)?RemoteObject(InvocationHandler)?|activation\x2e)/
-/org\x2ecodehaus\x2egroovy\x2eruntime\x2e((Converted|Method)Closure|ConversionHandler)/
-/org\x2ejboss\x2einterceptor\x2e(builder|reader|proxy|spi\x2e(metadata|model))\x2e/

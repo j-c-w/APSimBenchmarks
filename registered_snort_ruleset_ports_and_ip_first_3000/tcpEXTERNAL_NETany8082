@@ -1,1 +1,0 @@
-/^(To|From)[^\x3e]*?\x3e[a-z0-9]*[^a-z0-9][^\x3c]*?\x3c\x2fconvert(To|From)/

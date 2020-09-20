@@ -1,6 +1,2 @@
-/\x5cfooter[^ylrf].*\x5cfooter[^ylrf\x5c]([^\x5c]{19}|\s*?\x7d)/
-/^\s*?EHLO\s+\d[\d\x2e]{500}/
-/^\s*?HELO\s+\d[\d\x2e]{500}/
-/^p?\s*\x5c\([^\x3b]*?\x5c\(\x5c\)\x5c\(\x5c\)\x5c\(\x5c\)\x5c\(\x5c\)\x5c\(\x5c\)/
 /document\.execCommand\(\s*[\x22\x27]InsertUnorderedList[\x22\x27]\s*\)\s*\x3B.{0,250}\s*\w+\.swapNode\(\s*[A-Za-z\(\)\"\'\.\=\ ]{1,75}\s*\)\s*document\.execCommand\(\s*[\x22\x27]Undo[\x22\x27]\s*\)\s*\x3B/
 /setAttribute\x28[^\x29]*?classid[^\x29]*?[\x22\x27](\x5cx(((0[0-8bcef])|(1[0-8a-f])|(7f)))|(\x5cu\x7b{0,1}\d+?\x7d{0,1}))/

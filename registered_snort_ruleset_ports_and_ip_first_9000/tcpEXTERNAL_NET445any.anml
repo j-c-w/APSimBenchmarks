@@ -5970,28 +5970,5 @@
 <state-transition-element id="3_99"  symbol-set="[\x00]">
 	<activate-on-match element="3_100"/>
 </state-transition-element>
-<state-transition-element id="4_10"  symbol-set="[\x00]">
-	<report-on-match reportcode="4"/>
-</state-transition-element>
-<state-transition-element id="4_4"  symbol-set="[\x00-\x09\x0b-\xff]"  start="start-of-data">
-	<activate-on-match element="4_5"/>
-</state-transition-element>
-<state-transition-element id="4_5"  symbol-set="[\x00-\x09\x0b-\xff]">
-	<activate-on-match element="4_6"/>
-</state-transition-element>
-<state-transition-element id="4_6"  symbol-set="[\x5c]">
-	<activate-on-match element="4_7"/>
-</state-transition-element>
-<state-transition-element id="4_7"  symbol-set="[\x00]">
-	<activate-on-match element="4_8"/>
-	<activate-on-match element="4_9"/>
-</state-transition-element>
-<state-transition-element id="4_8"  symbol-set="[\x00-\x5b\x5d-\xff]">
-	<activate-on-match element="4_8"/>
-	<activate-on-match element="4_9"/>
-</state-transition-element>
-<state-transition-element id="4_9"  symbol-set="[\x00]">
-	<activate-on-match element="4_10"/>
-</state-transition-element>
 </automata-network>
 </anml>

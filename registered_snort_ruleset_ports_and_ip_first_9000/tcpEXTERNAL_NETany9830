@@ -1,1 +1,0 @@
-/^Accept-Language\s*\x3a\s*([^\x2c\x2d\n]+[\x2c\x2d]){16}/

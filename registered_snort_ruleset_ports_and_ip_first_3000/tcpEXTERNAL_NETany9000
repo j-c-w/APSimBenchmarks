@@ -1,6 +1,0 @@
-/\x3b\s*udhcpc\s*\x3b.*\x26/
-/^\x2fexternalauthenticationservlet.*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/
-/^\x2fimages.*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/
-/^\x2fpublish.*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/
-/^\x2fservices.*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/
-/^\x2fws.*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/

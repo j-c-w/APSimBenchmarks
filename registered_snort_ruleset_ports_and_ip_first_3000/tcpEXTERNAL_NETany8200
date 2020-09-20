@@ -1,1 +1,0 @@
-/^(arraytype|position)\x3d\x22[^\x5b]*?\x5b[^\x5d]{7}/

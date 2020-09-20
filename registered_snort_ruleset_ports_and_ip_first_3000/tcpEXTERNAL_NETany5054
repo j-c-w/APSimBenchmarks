@@ -1,5 +1,0 @@
-/(^|&)lf=[^&]*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/
-/(^|&|\x3F)outputfile=[^&]*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/
-/[?&]outputfile=[^&]*?\x2e\x2e\x2f/
-/\x2fgoform\x2fedit_lf_.*?lf=[^&]*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/
-/outputfile=[^&]*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/

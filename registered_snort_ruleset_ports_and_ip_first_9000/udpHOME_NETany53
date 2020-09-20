@@ -1,5 +1,4 @@
 /(((\x06dyndns|\x02yi)\x03org)|((\x07dynserv|\x04mooo)\x03com))/
-/(?:netflix|yahoo|htc|huffingtonpost|nbc|bankofamerica|youtube|reddit|linkedin|facebook|live|google|baidu|gmail|xbox|adidas|hilton|ctrip|dangdang|directv|douban|drugstore|dubizzle|eastmoney|enterprise|etao|fiverr|one|qq|qv|si|sogou|tuniu|usaa|weather|weibo|y8|yatra)c?\x02om\x00/
 /(udp|upd)-\d+?\x04mooo\x03com\x00/
 /[\x05-\x20][bcdfghjklmnpqrstvwxyz]{5,32}([\x01-\x20].*?|)\x02cc\x00/
 /[\x05-\x20][bcdfghjklmnpqrstvwxyz]{5,32}[^\x00]*?\x02cn\x00/
@@ -7,6 +6,4 @@
 /\d+?\x2dsrv\x03net\x00/
 /\x03ns1\x0aboxonline[\x31-\x33]\x03(com|net|org)\x00/
 /\x04mail\x06\d{6}.*\x00\x1c.{2}$/
-/\x21[^\x21]+?\x7b[^\x7d\x21]+?\x7d[\x28\x29]*?\x7b[^\x7d\x21]+?\x7d[\x28\x29]*?\x7b[^\x7d\x21]+?\x7d/
 /^.{13,29}[bcdfghjklmnpqrstvwxz]{5}/
-/^[a-z0-9]{23}[a-f0-9]{33}.[a-z0-9\-_]+.[a-z0-9\-_]+\x00\x00/

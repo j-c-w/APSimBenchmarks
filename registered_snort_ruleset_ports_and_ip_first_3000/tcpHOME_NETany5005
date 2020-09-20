@@ -1,2 +1,0 @@
-/^SINFO\x3B[^\r\n]{1,20}\x3BPONG\x3B/
-/^Sin[^\r\n]*\/[^\r\n]*\x0D\x0A\d+\x0D\x0A/

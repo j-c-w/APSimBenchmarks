@@ -1,5 +1,0 @@
-/^(maxlstint|.mincount|...?(last|addr)\.\d\d?|...resa(ll|ny)|.{4}(nonce|frags|limit|laddr))/
-/addr\x2e\d+\x2c/
-/last\x2e\d+\x2c/
-/mode\s+?\d{4}/
-/unpeer\s*?0/

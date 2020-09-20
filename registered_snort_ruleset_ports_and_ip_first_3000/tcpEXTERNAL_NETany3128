@@ -1,2 +1,0 @@
-/^[^\s]+\s+[^\s]+\s+http\x2f(\d+\x2e)?\d{10}/
-/ftp\x3A\x2F\x2F[\w\x2E\x2F]+[^\x2F]\x3Btype=D/

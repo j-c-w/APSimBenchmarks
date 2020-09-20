@@ -1,1 +1,0 @@
-/xml(element|forest|concat|agg|pi|comment|root|serialize|parse|type)\s*\x28\s*\w+\s*\x27<[^>]{256}/

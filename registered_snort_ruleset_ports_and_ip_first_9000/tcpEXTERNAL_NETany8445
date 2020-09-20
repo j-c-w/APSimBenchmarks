@@ -1,3 +1,0 @@
-/=alert\x28create(ModalDialogFromURL|WindowFromURL|WindowFromForm|IEWindowFromForm)/
-/[?&]height=[^&]*?([\x22\x27\x3c\x3e\x28\x29]|%22|%27|%3c|%3e|%28|%29|script|onload|src)/
-/[?&]url=[^&]*?(http|ftp)/

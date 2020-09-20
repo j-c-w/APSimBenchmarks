@@ -33,13 +33,11 @@
 /(array|repeat)\x28[^\x29]*?(0x)*\d{8,}\x29/
 /(attachToSS|CopyAll|CopyRange|CopyRangeEx|SwapTable)/
 /(cmap|head|hmtx|hhea|maxp|name|OS\x2F2|post).{4}([\x80-\xFF]|.{4}[\x80-\xFF])/
-/(encrypt_new.pdb|decrypt.pdb)/
 /(execCommand[^)]+(Undo|Redo|SelectAll|Unselect|Underline).*){2}/
 /(execCommand|LoadFile|src|setLayoutMode|setNamedDest|setPageMode)/
 /(installAppMgr|upgradeAsNeeded)/
 /(new\s*ActiveX|Create)Object\s*\(\s*[\x22\x27]TeeChart\.ChartGridNavigator/
 /(sIda\/sId|urua\/uru)[abcd]\.classPK/
-/(src|href)\s*=\s*(\x22|\x27|)telnet\x3a\x2f\x2f/
 /(stroke|fill) +(\x22|\x27)url\x28(http|https|ftp)\x3A/
 /-chrome\s*javascript/
 /-lh[014567d]-/
@@ -52,28 +50,14 @@
 /90\x0D?\x0A\w{8}/
 /<!--[^>]+saved from url=\x28[^>\x20]+--[^>]+--/
 /<ASX[^>]*?VERSION\s*=\s*[0-9\x22\x27][0-9\x2e]{20}/
-/<Address[^>]*?Name\s*=[\x22\x27][^\x22\x27]{64}/
-/<BaseSet[^>]*?BgOnOffBitAddr\s*=[\x22\x27][^\x22\x27]{64}/
-/<BaseSet[^>]*?CurScrIdAddr\s*=[\x22\x27][^\x22\x27]{64}/
-/<BaseSet[^>]*?EnterTime\s*=[\x22\x27][^\x22\x27]{520}/
-/<BaseSet[^>]*?HMINAME\s*=[\x22\x27][^\x22\x27]{64}/
-/<BaseSet[^>]*?ScrIDWordAddr\s*=[\x22\x27][^\x22\x27]{64}/
-/<CommSet[^>]*?Port\s*=[\x22\x27][^\x22\x27]{64}/
 /<Description>[^<]*?\x25(\d+\x24)?(\d+)?[nxcsd]/
 /<EMBED[^\x3E]*?PLUGINSPAGE\s*=[\x22\x27][^\x3E]*?([\x60\x3b\x7c]|[\x3c\x3e\x24]\x28|%60|%3b|%7c|%26|%3c%28|%3e%28|%24%28)/
-/<HmiSet[^>]*?Style\s*=[\x22\x27][^\x22\x27]{64}/
-/<HmiSet[^>]*?Type\s*=[\x22\x27][^\x22\x27]{520}/
 /<INPUT[^>]+type\s*=\s*[\x22\x27]?file[\x22\x27]?[^>]+OnKey(Down|Up|Press)\s*=[^>]*>.*<INPUT[^>]+type\s*=\s*[\x22\x27]?text[\x22\x27]?[^>]+OnKey(Down|Up|Press)[^>]+>/
 /<OBJECT\s+[^>]*classid\s*=\s*[\x22\x27]?\s*clsid\s*\x3a\s*\x7B?\s*085891E5-ED86-425F-8522-C10290FA8309/
 /<OBJECT\s+[^>]*classid\s*=\s*[\x22\x27]?\s*clsid\s*\x3a\s*\x7B?\s*25336921-03F9-11CF-8FD0-00AA00686F13/
 /<OBJECT\s+[^>]*classid\s*=\s*[\x22\x27]?\s*clsid\s*\x3a\s*\x7B?\s*E0CB08CE-AB3D-4779-9C77-62A439BFE6C3/
-/<PLC[^>]*?Type\s*=[\x22\x27][^\x22\x27]{128}/
 /<Path Data\s*=\s*[\x27|\x22]\s*L/
-/<ScreenSet.*?ScrnFile\s*=[\x22\x27][^\x22\x27]{64}/
-/<ScreenSet.*?ScrnName\s*=[\x22\x27][^\x22\x27]{128}/
-/<String[^>]*?Content\d\s*=[\x22\x27][^\x22\x27]{512}/
 /<[^>]*?style\s*[>=].{1,1024}margin\s*\x3a\s*[^\x3b\x7d]*?-\d+.*?[\x7b\x3b]/
-/<[^>]+href[^>]*(\x22c\x3A(\x2F|\x5C)|\\\\)[^>]*(\x3F|\x2Eexe)(\x22|\x27)/
 /<\s*col[^>]*span\s*=\s*[\x22\x27]/
 /<\s*style\s*>\s*\w+\s*\{\s*(\w+|\w+-\w+)\s*\:\s*\w+\s*\(.*?(\s*\x27\s*|\s*\&\#39\;\s*|\s*\&\#x27\;\s*|\s*\\u0027\;\s*){1}.*?\)\s*(\s*\x27\s*|\s*\&\#39\;\s*|\s*\&\#x27\;\s*|\s*\\u0027\;\s*){3,}.*?\}|(\s*\x27\s*|\s*\&\#39\;\s*|\s*\&\#x27\;\s*|\s*\\u0027\;\s*){1,}.*?\}\s*(\s*\x27\s*|\s*\&\#39\;\s*|\s*\&\#x27\;\s*|\s*\\u0027\;\s*){3,}/
 /<\s*valitem[^>]*\s(value|name)\s*=\s*([\x22\x27])[^\x22\x27]{104}/
@@ -86,7 +70,6 @@
 /<body[^>]+?onreadystatechange\s*=.*?<body[^>]+?style\s*=\s*[\x22\x27](-ms-)?behavior\s*:[^\x22\x27]+?[\x22\x27][^>]*?>[\s\t\r\n]*?<\/body/
 /<body[^>]+?style\s*=\s*[\x22\x27](-ms-)?behavior\s*:.*?<body[^>]+?onreadystatechange\s*=[^>]+?>[\s\t\r\n]*?<\/body/
 /<font[^>]+size[\s]*=[\s]*[\x22\x27]-[\d]+pt[\x22\x27]/
-/<form[^>]*?action\s*=\s*[\x22\x27][^\x22\x27]+ocPortal\/adminzone\/index\.php\?page=admin_ocf_join&type=step2[\x22\x27][^>]*?>/
 /<form[^>]+action\s*=\s*[\x22\x27]?[^>\x22\x27]*?\.[\.a-z]{2,6}(\x2500|\x00)\.[\.a-z]{2,6}/
 /<input value=[\x22\x27][\x80-\xa0\xe0-\xff][\x22\x27]/
 /<int[^>]*?id\s*=\s*(\x22|\x27)[^\x22\x27]{50}/
@@ -95,7 +78,6 @@
 /<object\s[^>]*?classid\s*=\s*[\x22\x27]?\s*clsid\s*\x3a\s*{?\s*A92B03A8-D509-4D2F-A953-B26ED8498AB0/
 /<path[^>]*\sd\s*=\s*[\x22\x27][^\x22\x27]*[\sMLC][-\s]{0,2}([0-9]{10}|[0-9]+e(0[7-9]|[1-9][0-9]))/
 /<progress[^\x2f]*?<meta/
-/<ref\s+href\s*=\s*\x22([^\x22]{2}|(\x25[0-9A-Z]{2}){1,2})\x3A\x2F[^\x22]{100}/
 /<rt[^?]*?style\s*=\s*[\x22\x27]?-ms-hyphens\s*\x3A\s*auto\s*\x3B\s*[\x27\x22]?\>[\w\W]{680}/
 /<script.*?(&#\d+\x3b){30}/
 /<script[^>]*src\s*=\s*[\x22\x27][^\x22\x27]*\.json[\x22\x27][^>]*language=vbs/
@@ -130,7 +112,6 @@
 /Intl\.(NumberFormat|Collator|DateTimeFormat)/
 /JBIG2Decode.*?stream(\x0d\x0a|\x0a|\x0d)/
 /LCDWriteString\x28(\d+\x2c){7}[^\x29]{1000,}/
-/Libs\/Starter(CmdExec|NetUtils|Rec|ScreenShots|Settings)\.py/
 /META-INF.*?[^a-zA-Z][a-zA-Z]{7}\.class/
 /Math\x2efloor([^\x7d]{1,3})?\x7dcatch\x28/
 /Math\x2eround([^\x7d]{1,3})?\x7dcatch\x28/
@@ -148,13 +129,9 @@
 /V(BA|.BA|B.A).{0,50}C(.reate|r.eate|re.ate|rea.te|reat.e|reate).{0,75}ell\x22/
 /Visio \x28TM\x29 Drawing\r\n\x00{4}([^\x00]|\x00[^\x00]|\x00\x00[^\x0b]|\x00\x00\x0b[^\x00])/
 /XObject.+?stream\x0a?\d{9,}\.\d{4,5}(\s+\d+\.\d{4,5}){5}\s+cm/
-/[=+-@](\w+\x28)?cmd\x7C\x27[^\x27]+\x27\x21\w+/
-/[=+-@](\w+\x28)?msiexec\x7C\x27[^\x27]+\x27\x21\w+/
-/[=+-@](\w+\x28)?powershell\x7C\x27[^\x27]+\x27\x21\w+/
 /[\x00\x01]\x00\x09\x00.*?\xff\xff\xff[\xff\xf7][\x36\x37]\x00/
 /[\x22\x27]?-ms-hyphens\:\s+?(auto|none|manual)\;\s?[\x22\x27]?\>[\d\D\w\W]{680,1920}<\x2Frt>/
 /[\x22\x27]\s*MsRdpClient\s*[\x22\x27]/
-/[^\x0d\x0a]{520}/
 /[^\x3b\x7d]*\x3b[^\x3b\x7d]*\x3b.{8}/
 /[^\x3e]{0,300}\x2fURI \x28data/
 /\(\?[gimxs]{1,5}\)/
@@ -209,7 +186,6 @@
 /\x2E(doc|xls|docx|ppt|pptx|docm|rtf)[\x20\x5F]+\x2Ewsf/
 /\x2EcacheSize\s*=\s*-{0,1}0x.*?\x2EMove/
 /\x2Ecall\x2Ecall\s*\x28[^\x29\x2C]*?\x2C\s*\x28?(0x|\d)/
-/\x2Edll[\x2F\x5C][^\x3E\x00\s\x2F\x5C]*[\x2F\x5C]?(\x23|%23)\x2b?(\d{6}|[7-9]\d{4}|6[6-9]\d{3}|65[6-9]\d{2}|655[4-9]\d|6553[6-9])/
 /\x2Edocument\x2EinsertBefore\s*\x28[^\x2C]+\x29/
 /\x2EgetElementsByTagName\x28[^\x29]+?\x2EremoveNode\x28true\x29/
 /\x2Epdf\x23[^\r\n]+\x3Djavascript\x3A/
@@ -250,7 +226,6 @@
 /\x2fType\x2fXRef\x2fW\x5b[^\x5d]*?\d{7,15}/
 /\x2f\x2a\s+XPM\s+\x2a\x2f[^\x7b]*?\x7b\s*\x22\s*(\d+\s+){3}\d{4}/
 /\x2fwidth[^\x3e]+\x2fDCTDecode/
-/\x3C[^>]*?[\x22\x27]onload\s*=/
 /\x3C[^\x3E]*embed[^\x3E]*type\s*\x3D\s*[\x22\x27]\s*application\/java-deployment-toolkit\s*[\x22\x27][^\x3E]*\x3E/
 /\x3C\S+\s+[^\x3E]*?(\x22[^\x22]{500}|\x27[^\x27]{500}|[^\x3E\x20\x09]{500})/
 /\x3C\x21ENTITY\s+.*\s+[\x22\x27]\x5D\x3E.*\x3Cd.*[\x22\x27]\x3E/
@@ -261,7 +236,6 @@
 /\x3c\s*IFRAME\s*[^\x3e]*src=(\x22|\x27\|)javascript\x3a/
 /\x3cbasefont.{0,250}(&#13|&#xd|0x0D|0x000D|0x0000000D|\x5cu000D).{0,5}\x3c\x2fbasefont/
 /\x3ccell\s+[^\x3e]*\x3aFormula\s*\x3d\s*\x22\s*\x3drept\x28/
-/\x3cimg[^\x3e]*?(width|height)\s*=\s*[\x22\x27]?\d{6}/
 /\x3cresources\x3e.*?\x2d(XXaltjvm|jar|cp|classpath)/
 /\x3cscript.*documentElement\x2e(height|preserveAspectRatio|viewBox|width|x|y)/
 /\x3cscript\x3etry\x7b\w+\x2b\x2b([^\x7d]{1,4})?\x7dcatch\x28/
@@ -287,7 +261,6 @@
 /\xff\x5e\x00(\x05[\x80-\xff]|\x06\x00[\x80-\xff]|\x06[^\x00])/
 /\xff\xff\xff\xff\x09\x08[\x08\x10]\x00\x00[\x05\x06]\x05\x00[^\x85]*\xdf/
 /\xff{8}\x09\x08[\x08\x10]\x00\x00[\x05\x06]\x00\x01/
-/^#[^\s\x22\x27]*?CallbackFn=[^\s\x22\x27]*?CallbackParam=/
 /^(.{13}|.{19}|.{31}|.{55}|.{103}|.{199}|.{391}|.{775})\x2C.{5}([\xE0-\xFF]|.{2}[\xE0-\xFF])/
 /^(.{3}[\x80-\xFF]|.{7}[\x80-\xFF])/
 /^(.{92}[^\x00]{41}|.{148}[^\x00]{41}|.{172}[^\x00]{41}|.{212}[^\x00]{41}|.{252}[^\x00]{22}|.{272}[^\x00]{22}|.{292}[^\x00]{22}|.{312}[^\x00]{22}|.{332}[^\x00]{22})/
@@ -350,7 +323,6 @@
 /^\s*\x5C?\x28\s*[\x22\x27][a-z]\x3A[\x2F\x5C]/
 /^\s+([^\x22\x20\x3E]{200}|[^\s]*\s+\x22[^\x22\x20\x3E]{200})/
 /^\s+(\w+)\s+\x22wb?\x22/
-/^\s+v[01]\.\d+\.\d+/
 /^\x01\x02.{0,50}[a-zA-Z]{10}\x2fPK.{0,50}[a-zA-Z]{10}\x2f[a-zA-Z]{7}\.classPK/
 /^\x22(%20|\s)-vm/
 /^\x23EXTINF.{5}[^\x0d\x0a]{512}/
@@ -370,21 +342,17 @@
 /app.execDialog\x28[^)]*?\x2C/
 /appendChild\x28\s*document\x2ecreateElement\x28\s*[\x22\x27]button[\x22\x27].*?outerText\s*=\s*[\x22\x27]{2}/
 /args\s*?\x3d\s*?[\x22\x27][^\s\x22\x27\x3e]{1024}/
-/async\s+class\s*=\s*[\x27\x22]([A-Za-z0-9+\x2f=]+|[^\x22\x27]*?\x3b\d{2,3}\x3b[01])[\x27\x22]/
 /beginbfrange[-<>0-9a-f\s]*<-[0-9A-F]{4,}>[-<>0-9a-f\s]*endbfrange/
 /body\x3e\x3cdiv\s[a-z]{3}\x3d\x22[a-z]{3}\x22/
 /cCharset\x3A\s*[\x22\x27][^\x22\x27]+?\x5C\x5Cr/
-/cal_from_jd\x28\s*\d{9,}/
 /call.*\x2e(Add|Delete)Column\x28.*\x29/
 /color\x3a\s*?[^\x7d]{62}/
 /color\x3d\s*?[\x22\x27][^\x22\x27]{20}/
-/content=[^&\r\n]*?([\x60\x3b\x7c\x23]|%(25)?(60|3b|7c|23|26)|([\x3c\x3e\x24]|%(25)?(3c|3e|24))(\x28|%(25)?28))/
 /createDataObject\(\s*?[\x22\x27][cdef]\x3A[\x2F\x5C]/
 /createImageBitmap\x28[^\x29]*?(\d{5}|0x\d{4})/
 /css\s*?\x28\s*?[\x22\x27]margin[^\x29]*?[\x22\x27]\s*?\x2c\s*?[\x22\x27]\d{12,}\s*?px/
 /document\.execCommand\(\s*[\x22\x27]InsertUnorderedList[\x22\x27]\s*\)\s*\x3B.{0,250}\s*\w+\.swapNode\(\s*[A-Za-z\(\)\"\'\.\=\ ]{1,75}\s*\)\s*document\.execCommand\(\s*[\x22\x27]Undo[\x22\x27]\s*\)\s*\x3B/
 /document\.isEqualNode\x28[^)]*(\x28?new MediaS(tream\x28|ource\x28)|\w+\.(getVideoPlaybackQuality\x28|(audio|video|text)Tracks))/
-/domain\x3d[^\x22\x26\x27]+?\x2f\x2e(zoom\x2eus|(zipow|zoom(gov)?)\x2ecom)\x22/
 /encoding\x3D[\x22\x27][^\x22\x27]{1024}/
 /eval\s*=\s*removeEventListener.*?eval\(/
 /eval\x28.*?\x29\x3b\s*}\s*\x3b<\/script>\s*<\/head>\s*<body>\s*<\/body>\s*<\/html>$/
@@ -392,9 +360,6 @@
 /expression\s*\x28\s*document\x2eselection\x2eempty\s*\x28\s*\x29\s*\x29/
 /fewbgazr([^\x7d]{1,3})?\x7dcatch\x28/
 /filename\x3d[^\r\n]*\x2e[^\x3b\x3f\x2e\x22\x27\r\n]{18,}[\x22\x27]/
-/fill\s+[\x27\x22]\s*?ephemeral\s*?:/
-/fill\s+[\x27\x22]\s*?label\s*?:(EPHEMERAL|HTTPS|MVG|MSL|TEXT|SHOW|WIN|PLT|@)/
-/fill\s+[\x27\x22]\s*?msl\s*?:/
 /fill\s+[^\x28\x27\x22]*?[\x28\x27\x22](url\x28)?\x7c/
 /fill\s+\x27(url\x28)?https\x3a[^\x27]*?\x22/
 /fill\s+url\x28https\x3a[^\x29]*?\x22/
@@ -413,9 +378,6 @@
 /hwehes[a-z0-9]{15,22}hwehes/
 /iframe[^>]*?[\s\x3b\x22\x27]name\s*=\s*[\x22\x27]?[^\x22\x27\s]{750}/
 /iframe[^\x3e]+onenote\x3a(\x2f|\x5c){2}[^\x3e]+(\x2fbackuppath|\x2fcachepath)/
-/image\s+[\w\x2d]+\s+\d+\s*,\s*\d+[^\x27\x22]*?[\x27\x22]\s*?ephemeral\s*?:/
-/image\s+[\w\x2d]+\s+\d+\s*,\s*\d+[^\x27\x22]*?[\x27\x22]\s*?label\s*?:(EPHEMERAL|HTTPS|MVG|MSL|TEXT|SHOW|WIN|PLT|@)/
-/image\s+[\w\x2d]+\s+\d+\s*,\s*\d+[^\x27\x22]*?[\x27\x22]\s*?msl\s*?:/
 /image\s+[\w\x2d]+\s+\d+\s*,\s*\d+[^\x28\x27\x22]*?[\x28\x27\x22](url\x28)?\x7c/
 /image\s+[\w\x2d]+\s+\d+\s*,\s*\d+[^\x28\x27]*?\x27(url\x28)?https\x3a[^\x27]*?\x22/
 /image\s+[\w\x2d]+\s+\d+\s*,\s*\d+[^\x28\x27]*?\x28https\x3a[^\x29]*?\x22/
@@ -433,19 +395,15 @@
 /object[^>]*type\s*=\s*[\x22\x27][^\x22\x27]*[^\x00-\x7f]/
 /object\s[^>]*type\s*=\s*[\x22\x27][^\x22\x27]*\x2f{32}/
 /org\.codehaus\.groovy\.runtime\.(Converted|Method)Closure(.|\n)*?}/
-/owa\x2F\x3F\x23viewmodel\x3D[^&\r\n]+?([\x28\x22\x27]|%22|%27|%28)/
 /padding-(left|right|bottom|top)\x3A\s*?\d{4}/
-/phar:\/\/[^&]{0,200}?\.phar[^&]{0,200}?(\x2e|%(25)?2e){2}([\x2f\x5c]|%(25)?(2f|5c))[^&]{0,200}?.phar/
 /poc\/(Exploit|myClassLoader|pocMain|runCmd)\.class/
 /position\x3aabsolute\x3b\s*((top|left)\x3a-\d{4}px\x3b){1,2}\s*(width|height)\x3a\d{3}px\x3b\s*(height|width)\x3a\d{3}px\x3b/
 /powershell\s*?-e\s*?[A-Za-z0-9+\/=]{20}/
-/productNameSrc[^&]*?(f|ht)tps?:[^&]*?\w+?\.(bmp|gif|jpe?g|png|tiff?)/
 /prototype([^\x7d]{1,3})?\x7dcatch\(\w{3}\)/
 /prototype([^\x7d]{1,3})?\x7dcatch\x28/
 /prototype\x2d([^\x7d]{1,5})?\x7dcatch\x28/
 /qt\x3anext\s*\x3d\s*\x22\s*file\x3a\x2f{3}/
 /rating\x2Dservice.{0,300}\x28\s*name\s*\x22[^\x22]{261}/
-/recolorinfo[^>]*numcolors\s*=\s*\x22/
 /rowspan\s*=\s*[\x22\x27]?\s*\d{6}/
 /setAttributeNS\s*\x28[^,]*,[^,]*required(Features|Extensions)[^,]*,[^\x29]+[\x22\x27]([\0\s]|\\([vfbtnsr0]|x(20|0[\da-f])))+[\x22\x27]/
 /setAttribute\x28[^\x29]*?classid[^\x29]*?[\x22\x27](\x5cx(((0[0-8bcef])|(1[0-8a-f])|(7f)))|(\x5cu\x7b{0,1}\d+?\x7d{0,1}))/
@@ -456,7 +414,6 @@
 /size\s*?\x3d\s*?[\x22\x27][^\s\x22\x27\x3e]{1024}/
 /smb\x3A\x2F\x2F[^\s\x0A\x0D\x3C]{251}/
 /smb\x3A\x2F\x2F[^\s\x0D\x0A\x3C]{251}/
-/src=(?P<q1>[\x22\x27])\s*?search-ms\x3a[^#]*?query=[^#]*?#[^(P=q1)]*?\x2f(root|select)/
 /srcElement\x2eparentNode\x2eremoveChild\s*\x28[^\x29]*srcElement/
 /src\s*=\s*[\x22\x27][^\x22\x27]*?\x2500[^\x22\x27]*?\.swf[\x22\x27]/
 /src\s*=\s*[\x22\x27][^\x22\x27]*?\x252500[^\x22\x27]*?\.swf[\x22\x27]/
@@ -464,13 +421,9 @@
 /stream[\x0A\x0D]{1,2}[CF]WS/
 /stream\nU3D[^<]*\x31\xff\xff\xff/
 /stream\s*31\x20+37\x20+30\x20+31\x20+34\x20+31\x20+31\x20+38\x20+33\x20+34\x20+36\x20+30\x20+34\x20+36\x20+39\x20+32\x20+33\x20+31\x20+37/
-/stroke\s+[\x27\x22]\s*?ephemeral\s*?:/
-/stroke\s+[\x27\x22]\s*?label\s*?:(EPHEMERAL|HTTPS|MVG|MSL|TEXT|SHOW|WIN|PLT|@)/
-/stroke\s+[\x27\x22]\s*?msl\s*?:/
 /stroke\s+[^\x28\x27\x22]*?[\x28\x27\x22](url\x28)?\x7c/
 /stroke\s+\x27(url\x28)?https\x3a[^\x27]*?\x22/
 /stroke\s+url\x28https\x3a[^\x29]*?\x22/
-/substr_replace\((\s*\$\w+\s*,\s*){3,}.*?\)\x3b/
 /swfobject\x2EembedSWF\x28\x22https?:\x2F\x2F[^\x22]+?\x23/
 /swfobject\x2EembedSWF\x28\x27https?:\x2F\x2F[^\x27]+?\x23/
 /table.*?caption.*?ClientRect.*?(tbodies|insertrow).*?(appenchild){0,1}/
@@ -484,21 +437,17 @@
 /u\x00n\x00e\x00s\x00c\x00a\x00p\x00e\x00\s*\x28(\x22|\x27|\x26quot\x3B|\x5c\x22)/
 /unescape\s*\x28\s*[\x22\x27]\x25[0-9a-f]{2}([\x22\x27]\s*\x2B\s*[\x22\x27])?\x25[0-9a-f]{2}/
 /unescape\s*\x28\s*[\x22\x27]\x25u[0-9a-f]{4}(\x22\x27]\s*\x2B\s*[\x22\x27])?\x25u[0-9a-f]{4}/
-/value(=|%3d)[\x22\x27][^\x22\x27]*?([\x3c\x3e\x28\x29]|script|onload|src|%3c|%3e|%28|%29)/
 /var\s+heapspray[A-Z\d_\s]*=/
 /var\s+shellcode\s*=/
 /version\x3D[\x22\x27][^\x22\x27]{1024}/
 /wallclock\x28((\d{2}\x3A){2}\d{2}\.[^\x2b\x2d\x5a]{11}|\d{4}-\d{2}-\d{2}T(\d{2}\x3A){2}\d{2}\.[^\x2b\x2d\x5a]{11})/
 /window\.console\.log\([^)]*(\x22|\x27)[^\x22\x27]*\x25n\x25n\x25n/
-/window\.location\s+=\s+(\x27|\x22)\w+:\/\/.*?--gpu-launcher/
-/window\.location\s+=\s+(\x27|\x22)\w+:\/\/.*?--renderer-cmd-prefix/
 /window\x2elocation\s*=\s*unescape\s*\x28\s*["']\x25[^"']*https?\x3a/
 /window\x2eopen\x28[^\x29]*?toolbar=yes[^)]*?width=[\d]{9}[^)]*?height=[\d]{9}/
 /xlink\x3ahref\s*=\s*[\x22\x27](h|&\x23(x0*68|0*104)\x3b)(t|&\x23(x0*74|0*116)\x3b){2}(p|&\x23(x0*70|0*112)\x3b)(s|&\x23(x0*73|0*115)\x3b)[^\x22\x27]*?&(quot|\x230*34|\x23x0*22)\x3b/
 /xlink\x3ahref\s*=\s*[\x22\x27]\x7c/
 /xsl\x3Atemplate[^\x3E]*priority\s*\x3D[\s\x22\x27]*[\d\x2D]*[^\s\x22\x27\d\x2d]/
 /xsl\x3aattribute[^>]*name\s*=\s*\x22([a-z]+&#x|(&#x[1-9a-f][0-9a-f]{4,}\x3b)+[^\s\x22&])/
-/zip\x3a\x2f\x2f[^\x0A\x20\x09\x0B\x0C\x85\x3E\x3C]{400}/
 /{\\sv\s*2\s*\x3b\s*\w+\s*[^},]*\x3b\s*\w{5}\s*\x3b/
 /{\\sv\s*4\s*\x3b\s*\w+\s*[^},]*\x3b\s*\w{7}\s*\x3b/
 /{\\sv\s*8\s*\x3b\s*\w+\s*[^},]*\x3b\s*\w{9}\s*\x3b/

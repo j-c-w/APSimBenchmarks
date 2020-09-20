@@ -1,3 +1,0 @@
-/^CSeq\x3A\s*[^\nA-Za-z]*[A-Za-z][^\n]{16,}/
-/^REGISTER\s+sip\x3A[^\r\n\s]+\x40[^\r\n\s]+\s+SIP\x2F2\x2E0/
-/^\s*\x3a\s*\d{11}/
