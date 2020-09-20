@@ -1,4 +1,3 @@
-/(INSERT|UPDATE)\s*[\s\w]*((mysql\.)?func)[^\r\n]+values\s*\([^\)]+\x2c[\x22\x27][^\x22\x27]*\x2f/
 /DATE_FORMAT\x28\s*(\x22[^\x22]+\x25[^\x22]*\x22|\x27[^\x27]+\x25[^\x27]*\x27)/
 /IN\s*\x28\s*NULL\s*\x2C\s*[0-9a-z\x24\x5F\x60]/
 /\x03create\s+(aggregate\s+)*function/
