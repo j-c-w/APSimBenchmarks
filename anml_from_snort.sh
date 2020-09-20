@@ -17,8 +17,11 @@ fi
 
 set -x
 output=$2
+input=$1
+shift 2
 rm -rf $output
-python regex_group_extractor.py $1 $output
+
+python regex_group_extractor.py $input $output $@
 for f in $output/*; do
 	if [[ $(wc -l $f | cut -f1 -d' ') -gt 0 ]]; then
 		if [[ ${#leave_dups} == 0 ]]; then

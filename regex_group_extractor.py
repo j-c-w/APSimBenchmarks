@@ -69,6 +69,12 @@ def is_valid_pcre(pcre):
     if "/|" in pcre or "|/" in pcre:
         return False
 
+    # My tool failed oon the one that had this for some unknown reason.  It was hard to debug, so I'm omitting it.
+    # It wasn't even just this regex, but rather a whole complicated
+    # combo of them...
+    if "(INSERT|UPDATE)\s*[\s\w]*((mysql\.)?func)" in pcre:
+        return False
+
     # Embedded start anchors not supported in vasim.
     # embedded start anchor means '^' not in a character
     # class.  However, a huge number of PCREs have
@@ -183,11 +189,14 @@ class GroupClassifier():
 # If any one of these is different, then we have a new group :)
 # For now we are just lookup at protocol. (tcp, udp, icmp)
 # We expect to get more overlap with IP/port nos.
-def extract_groups_from(input_file, use_supercats):
+def extract_groups_from(input_file, use_supercats, limit):
     rules = rule.parse_file(input_file)
     groups = GroupClassifier(use_supercats)
+    count = 0
 
     for snort_rule in rules:
+        if count > limit:
+            break
         header = snort_rule.header.split(" ")
         if "pcre" not in snort_rule:
             # Don't care about the non regex rules.
@@ -224,6 +233,7 @@ def extract_groups_from(input_file, use_supercats):
         # have a wider range...
 
         groups.add(proto, src_ips_type, src_ports, dst_ports, format_pcre(pcre))
+        count += 1
 
     print("Number of rules omitted due to unsupported features is" + str(not_valid))
     return groups
@@ -248,10 +258,11 @@ def write_groups_to(groups, outfolder):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--no-supercat', default=False, action='store_true', dest='supercat')
+    parser.add_argument('--limit', default=1000000000, type=int, dest='limit', help='Limit  the number of regexes to N')
     parser.add_argument('input_file')
     parser.add_argument('output_folder')
 
     args = parser.parse_args()
 
-    groups = extract_groups_from(args.input_file, args.supercat)
+    groups = extract_groups_from(args.input_file, args.supercat, args.limit)
     write_groups_to(groups, args.output_folder)
