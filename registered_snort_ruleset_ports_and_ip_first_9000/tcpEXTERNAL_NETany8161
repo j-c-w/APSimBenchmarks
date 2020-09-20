@@ -1,0 +1,2 @@
+/[?&]JMSDestination=[^&]*?([\x22\x27\x3c\x3e\x28\x29]|script|onload|src)/
+/\x2ffileserver\x2f(((\x2e|%2e)(\x2e|%2e))(\x2f|%2f|\x5c|%5c))/

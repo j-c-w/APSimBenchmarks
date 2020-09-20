@@ -1,0 +1,4 @@
+/(^|&)fileName=[^&]*?(\x2e|%2e){2}([\x2f\x5c]|%2f|%5c)/
+/[?&]fileName=[^&]*?\x2e\x2e\x2f/
+/[\x2f\x5c]jsp[\x2f\x5c]WebStart[^&?].*?\x2Ejsp/
+/\x2e\x2e[\x2f\x5c]jsp[\x2f\x5c]WebStart[^&?].*?\x2Ejsp/

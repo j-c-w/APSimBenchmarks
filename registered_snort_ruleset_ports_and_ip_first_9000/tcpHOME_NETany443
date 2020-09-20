@@ -1,0 +1,14 @@
+/Cookie\:\s+[0-9a-f]{12}[^\r\n]+\r\n\x00{4}.{4}/
+/GET \/[a-z]{8,12}\?[a-z] HTTP\/1.1/
+/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{13}\x28\x0A\x51/
+/\/3001[0-9A-F]{262,304}/
+/\/ajax\?[a-zA-Z]{20}/
+/\/index\d{9}\.asp/
+/\d+\x2d{2}\r\n$/
+/\s\:Hello everyone,\s.*?\shere\sand\si'm\shere\sand\sready\sto\sDDoS\./
+/\x2Faws\d{1,5}\.jsp\x3F/
+/^GET \/\w+\/\d{5}\/[a-z]{4}\.php\?[a-z]{3}\x5Fid=[A-Za-z0-9+\/]{43}= HTTP\//
+/^POST\x20\x2f[A-F\d]{42}\x20HTTP/
+/^POST\x20\x2fg[ao]lfstream\x26/
+/^\d+O\d+\.jsp\?[a-z0-9\x3d\x2b\x2f]{20}/
+/index\x2easpx\x3f[0-9a-fA-F]{2}\x3d\d{1,7}I\d{1,10}/

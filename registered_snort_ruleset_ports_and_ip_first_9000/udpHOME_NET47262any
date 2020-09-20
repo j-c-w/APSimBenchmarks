@@ -1,0 +1,2 @@
+/^Delta\s+Source\s+\d+\x2E\d+/
+/^Server\s+info\x3A\x0D\x0ADelta\s+Source\s+v\d+\x2E\d+/

@@ -1,0 +1,4 @@
+/\x2FCD[^\r\n]*\x18\x16/
+/\x2FCU[^\r\n]*\x18\d+\x18True\x18\x16/
+/\x2FRF[^\r\n]*\x16/
+/^net\x2etcp\x2elisten\x5b\s*?\d+?\s*?[\x22\x27]\s*?\x3b/

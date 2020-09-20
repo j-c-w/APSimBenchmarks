@@ -1,0 +1,2 @@
+/(username|connectID)\x3d\w{255}/
+/\/isqlplus\/login\.uix?(username|connectID)\x3d\w{255}/

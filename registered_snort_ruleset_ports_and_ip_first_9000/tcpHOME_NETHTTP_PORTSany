@@ -1,0 +1,5 @@
+/<title>Deploy\s*(Enterprise)?\s*Applications/
+/Server\x3a[^\r\n]*WatchDog[^\r\n]*Server/
+/\/\d+\.exe$/
+/\x3ciframe[^\x3e]*?src\x3d\x22http\x3a\x2f\x2f[^\x26\x2e]+\x26\x2346\x3b[^\x2e]+\x2epl\x2frc\x2f\x22/
+/^Server\x3a[^\r\n]*NETObserve/

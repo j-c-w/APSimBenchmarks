@@ -1,0 +1,3 @@
+/Windows\s+Directory\s+Flooded/
+/\s{23}DIMBUS\s+Server\s+v\d+\x2E\d+/
+/^Connected\s+to\s+[^\r\n]*\x28\d+\.\d+\.\d+\.\d+\x29/

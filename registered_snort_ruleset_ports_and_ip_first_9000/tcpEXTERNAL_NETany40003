@@ -1,0 +1,1 @@
+/bbdd(host|user|passwd)=\x22[^\s]*?([\x60\x3b\x7c]|\x24\x28)/
